@@ -9,21 +9,26 @@
 <body>
 
     <!-- ================= HEADER ================= -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container nav-container">
             <a href="#" class="logo-link">
                 <img src="logo.png" alt="Nrithya Collections Logo" class="logo">
             </a>
 
-            <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
             <nav class="navbar" id="navbar">
                 <a href="#home">Home</a>
                 <a href="#dances">Dance Forms</a>
                 <a href="#jewellery">Jewellery</a>
                 <a href="#accessories">Accessories</a>
-                <a href="#features">Features</a>
-                <a href="#contact">Contact</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact" class="nav-cta">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -32,82 +37,118 @@
 
         <!-- ================= HERO BANNER ================= -->
         <section class="hero">
-            <div class="hero-content">
-                <p class="small-title">TRADITION • ELEGANCE • PERFORMANCE</p>
-                <h1>Celebrate Every Dance<br><span>With the Perfect Look</span></h1>
-                <p>
-                    Explore classical dance costumes, jewellery, hair accessories,
-                    ghungroo and complete dance packages at Nrithya Collections.
-                </p>
-                <a href="#dances" class="btn">Explore Collections</a>
+            <div class="hero-bg-shapes"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge-pill">TRADITION • ELEGANCE • PERFORMANCE</span>
+                    <h1>Celebrate Every Dance<br><span>With the Perfect Look</span></h1>
+                    <p>
+                        Explore premium classical dance costumes, temple jewellery, hair accessories, 
+                        ghungroos, and complete rental packages at Nrithya Collections.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#dances" class="btn primary-btn">Explore Collections</a>
+                        <a href="#contact" class="btn secondary-btn">Get Custom Quote</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <span class="icon">✨</span>
+                        <div>
+                            <h4>100% Authentic</h4>
+                            <p>Handcrafted designs</p>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <span class="icon">👑</span>
+                        <div>
+                            <h4>Rental Available</h4>
+                            <p>Costumes & Jewellery</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- ================= DANCE CATEGORIES ================= -->
         <section class="section" id="dances">
             <div class="section-heading">
-                <p class="eyebrow">OUR COLLECTION</p>
+                <span class="eyebrow">OUR COLLECTION</span>
                 <h2>Choose Your Dance Form</h2>
-                <p>Select a dance form to explore its costumes and accessories.</p>
+                <p>Select a dance form to explore its complete costume styles, ornaments, and package details.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All Forms</button>
+                <button class="filter-btn" data-filter="kerala">Kerala Classical</button>
+                <button class="filter-btn" data-filter="pan-india">Pan-India Classical</button>
             </div>
 
             <div class="dance-grid">
 
-                <a href="#" class="dance-card bharatanatyam">
+                <div class="dance-card bharatanatyam" data-category="pan-india" data-title="Bharatanatyam" data-desc="Complete custom-stitched silk costumes with matching temple jewellery sets and accessories.">
                     <div class="card-overlay">
                         <span>01</span>
                         <h3>Bharatanatyam</h3>
                         <p>Costumes & Accessories</p>
+                        <button class="quick-view-btn">Quick View →</button>
                     </div>
-                </a>
+                </div>
 
-                <a href="#" class="dance-card mohiniyattam">
+                <div class="dance-card mohiniyattam" data-category="kerala" data-title="Mohiniyattam" data-desc="Traditional Kasavu white and gold pleated attire designed for graceful movements.">
                     <div class="card-overlay">
                         <span>02</span>
                         <h3>Mohiniyattam</h3>
                         <p>Costumes & Accessories</p>
+                        <button class="quick-view-btn">Quick View →</button>
                     </div>
-                </a>
+                </div>
 
-                <a href="#" class="dance-card kuchipudi">
+                <div class="dance-card kuchipudi" data-category="pan-india" data-title="Kuchipudi" data-desc="Vibrant half-saree costume sets tailored with rich zari borders and matching ornaments.">
                     <div class="card-overlay">
                         <span>03</span>
                         <h3>Kuchipudi</h3>
                         <p>Costumes & Accessories</p>
+                        <button class="quick-view-btn">Quick View →</button>
                     </div>
-                </a>
+                </div>
 
-                <a href="#" class="dance-card kerala-nadanam">
+                <div class="dance-card kerala-nadanam" data-category="kerala" data-title="Kerala Nadanam" data-desc="Expressive stylistic costume sets inspired by Guru Gopinath's classical innovations.">
                     <div class="card-overlay">
                         <span>04</span>
                         <h3>Kerala Nadanam</h3>
                         <p>Costumes & Accessories</p>
+                        <button class="quick-view-btn">Quick View →</button>
                     </div>
-                </a>
+                </div>
 
-                <a href="#" class="dance-card kathakali">
+                <div class="dance-card kathakali" data-category="kerala" data-title="Kathakali" data-desc="Elaborate traditional attire, heavy skirts, and supporting performance kits.">
                     <div class="card-overlay">
                         <span>05</span>
                         <h3>Kathakali</h3>
                         <p>Costumes & Accessories</p>
+                        <button class="quick-view-btn">Quick View →</button>
                     </div>
-                </a>
+                </div>
 
-                <a href="#" class="dance-card ottamthullal">
+                <div class="dance-card ottamthullal" data-category="kerala" data-title="Ottamthullal" data-desc="Colorful stylized green-themed performance costumes with distinct ornaments.">
                     <div class="card-overlay">
                         <span>06</span>
                         <h3>Ottamthullal</h3>
                         <p>Costumes & Accessories</p>
+                        <button class="quick-view-btn">Quick View →</button>
                     </div>
-                </a>
+                </div>
 
-                <a href="#" class="dance-card chakyarkoothu">
+                <div class="dance-card chakyarkoothu" data-category="kerala" data-title="Chakyarkoothu" data-desc="Authentic ritualistic traditional temple art attire and accessories.">
                     <div class="card-overlay">
                         <span>07</span>
                         <h3>Chakyarkoothu</h3>
                         <p>Costumes & Accessories</p>
+                        <button class="quick-view-btn">Quick View →</button>
                     </div>
-                </a>
+                </div>
 
             </div>
         </section>
@@ -115,45 +156,45 @@
         <!-- ================= JEWELLERY BANNER ================= -->
         <section class="wide-banner jewellery-banner" id="jewellery">
             <div class="banner-content">
-                <p class="eyebrow">TRADITIONAL BEAUTY</p>
+                <span class="eyebrow">TRADITIONAL BEAUTY</span>
                 <h2>Jewellery & Hair Accessories</h2>
                 <p>
-                    Complete your classical dance appearance with traditional
-                    jewellery, temple-style ornaments, flowers and hair accessories.
+                    Complete your classical dance appearance with traditional temple-style gold ornaments, 
+                    real-look synthetic stones, veni flowers, and specialized hair arrangements.
                 </p>
-                <a href="#" class="btn light-btn">View Collection</a>
+                <a href="#contact" class="btn light-btn">Enquire Jewellery Sets</a>
             </div>
         </section>
 
         <!-- ================= GHUNGROO & ACCESSORIES ================= -->
         <section class="section" id="accessories">
             <div class="section-heading">
-                <p class="eyebrow">COMPLETE YOUR PERFORMANCE</p>
-                <h2>Ghungroo & Other Accessories</h2>
-                <p>Everything you need for your stage performance in one place.</p>
+                <span class="eyebrow">COMPLETE YOUR PERFORMANCE</span>
+                <h2>Ghungroo & Other Essentials</h2>
+                <p>Everything you need for practice sessions and grand stage performances in one place.</p>
             </div>
 
             <div class="accessory-grid">
 
-                <div class="accessory-card ghungroo-card">
+                <div class="accessory-card">
                     <div class="accessory-icon">◉</div>
                     <h3>Ghungroo</h3>
-                    <p>Traditional dance bells for practice and performances.</p>
-                    <a href="#">Explore Ghungroo →</a>
+                    <p>High-grade brass bells fitted securely on soft padded leather cushions for clear acoustics.</p>
+                    <a href="#contact" class="card-link">Explore Ghungroo →</a>
                 </div>
 
                 <div class="accessory-card">
                     <div class="accessory-icon">✦</div>
                     <h3>Dance Accessories</h3>
-                    <p>Essential accessories to complete your classical dance look.</p>
-                    <a href="#">Explore Accessories →</a>
+                    <p>Makeup kits, waist bands, pleat fans, and posture support items for artists.</p>
+                    <a href="#contact" class="card-link">Explore Accessories →</a>
                 </div>
 
                 <div class="accessory-card">
                     <div class="accessory-icon">❖</div>
                     <h3>Hair Accessories</h3>
-                    <p>Flowers, ornaments and traditional hair decorations.</p>
-                    <a href="#">Explore Hair Accessories →</a>
+                    <p>Artificial flowers, jada ornaments, billai sets, and traditional hair pins.</p>
+                    <a href="#contact" class="card-link">Explore Hair Ornaments →</a>
                 </div>
 
             </div>
@@ -161,69 +202,135 @@
 
         <!-- ================= FEATURES ================= -->
         <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">WHY NRITHYA COLLECTIONS?</span>
+                    <h2>Everything for Your Dance Journey</h2>
+                </div>
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <div class="feature-number">01</div>
+                        <h3>Combo Offers</h3>
+                        <p>Convenient costume and matching jewelry combinations offered at attractive discounted bundle prices.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-number">02</div>
+                        <h3>Full Dance Packages</h3>
+                        <p>Complete curated packages designed explicitly for individual classical dance arangetrams and recitals.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-number">03</div>
+                        <h3>Rent Costumes</h3>
+                        <p>High-end performance costumes and selected temple accessories available easily for short-term rental.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-number">04</div>
+                        <h3>One-Stop Collection</h3>
+                        <p>Save time with full sets—costumes, jewelry, hair pieces, and ghungroo available under one roof.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TESTIMONIALS ================= -->
+        <section class="section testimonials-section" id="testimonials">
             <div class="section-heading">
-                <p class="eyebrow">WHY NRITHYA COLLECTIONS?</p>
-                <h2>Everything for Your Dance Journey</h2>
+                <span class="eyebrow">HAPPY ARTISTS</span>
+                <h2>Trusted by Dancers & Teachers</h2>
+                <p>Hear what classical dance gurus and students have to say about our collections.</p>
             </div>
 
-            <div class="feature-grid">
-
-                <div class="feature-card">
-                    <div class="feature-number">01</div>
-                    <h3>Combo Offers</h3>
-                    <p>Convenient costume and accessory combinations at attractive prices.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="feedback">"The Bharatanatyam costume fit my student perfectly for her Arangetram! The quality of the silk and pleats stood out on stage."</p>
+                    <h4 class="client-name">— Dr. Ananya Warrier</h4>
+                    <span class="client-role">Classical Dance Instructor, Palakkad</span>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-number">02</div>
-                    <h3>Full Dance Packages</h3>
-                    <p>Complete packages designed for individual classical dance forms.</p>
+                <div class="testimonial-card">
+                    <p class="feedback">"Renting costumes for our annual school dance festival was so seamless. Great customer service and authentic temple jewelry sets."</p>
+                    <h4 class="client-name">— Rajesh Menon</h4>
+                    <span class="client-role">Cultural Event Coordinator</span>
                 </div>
+            </div>
+        </section>
 
-                <div class="feature-card">
-                    <div class="feature-number">03</div>
-                    <h3>Rent Costumes</h3>
-                    <p>Costumes and selected accessories available for rental.</p>
+        <!-- ================= FAQ SECTION ================= -->
+        <section class="section faq-section" id="faq">
+            <div class="section-heading">
+                <span class="eyebrow">GOT QUESTIONS?</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">Do you provide custom stitching for dance costumes? <span class="arrow">⌄</span></button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer customized stitching based on individual measurements for Bharatanatyam, Kuchipudi, Mohiniyattam, and other styles.</p>
+                    </div>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-number">04</div>
-                    <h3>One-Stop Collection</h3>
-                    <p>Costumes, jewellery, hair accessories, ghungroo and more in one place.</p>
+                <div class="faq-item">
+                    <button class="faq-question">Are rental options available for outfits and jewelry? <span class="arrow">⌄</span></button>
+                    <div class="faq-answer">
+                        <p>Yes, we provide rental services for select high-end costumes, full sets of temple jewelry, and stage props for recitals.</p>
+                    </div>
                 </div>
-
+                <div class="faq-item">
+                    <button class="faq-question">Where are you located for direct store visits? <span class="arrow">⌄</span></button>
+                    <div class="faq-answer">
+                        <p>We are based in Palakkad, Kerala (Pin: 679552). You can contact us via phone or email to schedule a visit.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- ================= CTA ================= -->
         <section class="cta">
-            <div>
-                <p class="eyebrow">READY FOR YOUR NEXT PERFORMANCE?</p>
-                <h2>Find Your Perfect Dance Collection</h2>
-                <p>Discover traditional elegance for every stage and every occasion.</p>
+            <div class="container cta-container">
+                <div>
+                    <span class="eyebrow">READY FOR YOUR NEXT PERFORMANCE?</span>
+                    <h2>Find Your Perfect Dance Collection</h2>
+                    <p>Discover traditional elegance for every stage and every occasion.</p>
+                </div>
+                <a href="#contact" class="btn light-btn">Contact Us Today</a>
             </div>
-            <a href="#contact" class="btn">Contact Us</a>
         </section>
 
     </main>
 
     <!-- ================= FOOTER ================= -->
     <footer class="footer" id="contact">
-        <div class="footer-main">
+        <div class="footer-main container">
 
             <div class="footer-brand">
                 <img src="logo.png" alt="Nrithya Collections" class="footer-logo">
                 <p>
-                    Your complete destination for classical dance costumes
-                    and accessories.
+                    Your complete destination for classical dance costumes, 
+                    temple jewellery, and stage performance accessories.
                 </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#dances">Dance Forms</a></li>
+                    <li><a href="#jewellery">Jewellery</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
             </div>
 
             <div class="footer-column">
                 <h3>Contact Us</h3>
                 <p><strong>Nrithya Collections</strong></p>
                 <p>Palakkad, Kerala - 679552</p>
-                <p>Phone: XXXXXXXXXX</p>
+                <p>Phone: +91 XXXXXXXXXX</p>
                 <p>Email: nrithyacollections@gmail.com</p>
             </div>
 
@@ -234,6 +341,19 @@
         </div>
     </footer>
 
+    <!-- ================= MODAL POPUP ================= -->
+    <div class="modal-overlay" id="danceModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <span class="badge-pill" id="modalCategory">Dance Form</span>
+            <h2 id="modalTitle">Dance Title</h2>
+            <p id="modalDesc">Detailed description of the costume style, pleats, zari quality, and accessory matching will appear here.</p>
+            <div class="modal-actions">
+                <a href="#contact" class="btn primary-btn" id="modalInquireBtn">Book / Enquire Now</a>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
-  </html>
+</html>
