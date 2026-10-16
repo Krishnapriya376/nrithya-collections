@@ -1,0 +1,599 @@
+/* ================= BASIC SETTINGS ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #351313;
+    background: #fffaf3;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: #fffdf9;
+    border-bottom: 1px solid #e8d4b0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(80, 35, 15, 0.08);
+}
+
+.nav-container {
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    width: 155px;
+    height: auto;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navbar a {
+    position: relative;
+    padding: 8px 0;
+}
+
+.navbar a:hover {
+    color: #a96d05;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #b77a13;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 28px;
+    color: #5d1717;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 35%, rgba(190, 131, 26, 0.18), transparent 28%),
+        linear-gradient(135deg, #fffaf2, #f6e5ca 50%, #fffaf3);
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(169, 109, 5, 0.35);
+    border-radius: 50%;
+}
+
+.hero::before {
+    width: 650px;
+    height: 650px;
+}
+
+.hero::after {
+    width: 530px;
+    height: 530px;
+}
+
+.hero-content {
+    width: min(800px, 90%);
+    position: relative;
+    z-index: 2;
+}
+
+.small-title,
+.eyebrow {
+    color: #a66b08;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 1.05;
+    margin: 18px 0;
+    color: #571414;
+}
+
+.hero h1 span {
+    color: #a56c0b;
+}
+
+.hero-content > p:not(.small-title) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-family: Arial, sans-serif;
+    color: #5f4b3d;
+}
+
+.btn {
+    display: inline-block;
+    background: #681717;
+    color: #fff;
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a66b08;
+    transform: translateY(-2px);
+}
+
+/* ================= SECTIONS ================= */
+.section {
+    padding: 85px 5%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 45px);
+    color: #571414;
+    margin: 7px 0 10px;
+}
+
+.section-heading p:last-child {
+    font-family: Arial, sans-serif;
+    color: #746154;
+}
+
+/* ================= DANCE CARDS ================= */
+.dance-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.dance-card {
+    min-height: 275px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background:
+        linear-gradient(145deg, #6b1717, #a76e14);
+    box-shadow: 0 10px 25px rgba(70, 28, 10, 0.14);
+    isolation: isolate;
+}
+
+.dance-card::before {
+    content: "✦";
+    position: absolute;
+    right: 22px;
+    top: 15px;
+    font-size: 85px;
+    color: rgba(255,255,255,0.16);
+}
+
+.dance-card::after {
+    content: "DANCE";
+    position: absolute;
+    font-family: Arial, sans-serif;
+    font-size: 54px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: rgba(255,255,255,0.08);
+    transform: rotate(-90deg);
+    right: -45px;
+    top: 80px;
+}
+
+.dance-card:nth-child(even) {
+    background: linear-gradient(145deg, #a56c0b, #6a1919);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 25px;
+    background: linear-gradient(transparent, rgba(38, 7, 7, 0.9));
+    color: white;
+}
+
+.card-overlay span {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+.card-overlay h3 {
+    font-size: 24px;
+    margin-top: 4px;
+}
+
+.card-overlay p {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.dance-card:hover {
+    transform: translateY(-6px);
+    transition: 0.3s;
+}
+
+/* Different decorative patterns for categories */
+.mohiniyattam { background: linear-gradient(145deg, #d5a65c, #7d4c20) !important; }
+.kuchipudi { background: linear-gradient(145deg, #7d2020, #3c0e0e) !important; }
+.kerala-nadanam { background: linear-gradient(145deg, #bd8123, #5b3314) !important; }
+.kathakali { background: linear-gradient(145deg, #0e5446, #172c26) !important; }
+.ottamthullal { background: linear-gradient(145deg, #8e3c20, #571414) !important; }
+.chakyarkoothu { background: linear-gradient(145deg, #744b1b, #321717) !important; }
+
+/* ================= WIDE BANNER ================= */
+.wide-banner {
+    min-height: 430px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.jewellery-banner {
+    background:
+        radial-gradient(circle at 78% 45%, rgba(255,255,255,0.22), transparent 20%),
+        radial-gradient(circle at 85% 35%, rgba(255,255,255,0.12), transparent 30%),
+        linear-gradient(120deg, #5c1414, #9a6511 65%, #c39243);
+    color: white;
+}
+
+.jewellery-banner::after {
+    content: "✦  ❖  ✧  ✦  ❖";
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-12deg);
+    font-size: 55px;
+    letter-spacing: 20px;
+    color: rgba(255,255,255,0.25);
+}
+
+.banner-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-content h2 {
+    font-size: clamp(34px, 5vw, 56px);
+    margin: 10px 0;
+}
+
+.banner-content p:not(.eyebrow) {
+    font-family: Arial, sans-serif;
+    max-width: 580px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.light-btn {
+    background: #fff;
+    color: #611515;
+}
+
+.light-btn:hover {
+    background: #f6dfb6;
+}
+
+/* ================= ACCESSORIES ================= */
+.accessory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.accessory-card {
+    background: #fff;
+    border: 1px solid #ead8b9;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(70, 28, 10, 0.07);
+    transition: 0.3s;
+}
+
+.accessory-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(70, 28, 10, 0.12);
+}
+
+.accessory-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 20px;
+    background: #f5e2bf;
+    color: #711919;
+    font-size: 28px;
+}
+
+.accessory-card h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.accessory-card p {
+    font-family: Arial, sans-serif;
+    color: #6d5a4e;
+    margin-bottom: 18px;
+}
+
+.accessory-card a {
+    color: #a36a08;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ================= FEATURES ================= */
+.features-section {
+    background: #f4e5cf;
+    padding: 85px 5%;
+}
+
+.feature-grid {
+    width: min(1100px, 92%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.8);
+    padding: 30px 24px;
+    border-top: 4px solid #9f680c;
+}
+
+.feature-number {
+    font-family: Arial, sans-serif;
+    color: #a36a08;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.feature-card h3 {
+    margin: 12px 0 8px;
+    font-size: 22px;
+}
+
+.feature-card p {
+    font-family: Arial, sans-serif;
+    color: #6b5a4e;
+    font-size: 14px;
+}
+
+/* ================= CTA ================= */
+.cta {
+    background: #641717;
+    color: white;
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cta .eyebrow {
+    color: #e0b45f;
+}
+
+.cta h2 {
+    font-size: clamp(30px, 4vw, 45px);
+    margin: 5px 0;
+}
+
+.cta p:not(.eyebrow) {
+    font-family: Arial, sans-serif;
+    opacity: 0.8;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #210d0d;
+    color: #eadbca;
+}
+
+.footer-main {
+    width: min(1150px, 90%);
+    margin: auto;
+    padding: 65px 0 45px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 50px;
+}
+
+.footer-logo {
+    width: 180px;
+    background: #fffaf3;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    font-family: Arial, sans-serif;
+    color: #bca99a;
+    max-width: 350px;
+}
+
+.footer-column {
+    font-family: Arial, sans-serif;
+}
+
+.footer-column h3 {
+    color: #e0ad54;
+    font-family: Georgia, serif;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    color: #cbb9aa;
+    font-size: 14px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    padding: 18px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #a58f82;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 950px) {
+    .dance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-container {
+        min-height: 75px;
+    }
+
+    .logo {
+        width: 125px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 75px;
+        background: #fffdf9;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 5%;
+        border-bottom: 1px solid #e8d4b0;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 13px 0;
+        border-bottom: 1px solid #eee0ca;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .dance-grid,
+    .accessory-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dance-card {
+        min-height: 230px;
+    }
+
+    .wide-banner {
+        min-height: 500px;
+        padding: 60px 8%;
+    }
+
+    .jewellery-banner::after {
+        right: -30px;
+        font-size: 35px;
+    }
+
+    .cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+}
