@@ -83,10 +83,10 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Updated Hero Section -->
   <section class="hero">
     <div class="container hero-content">
-      <img src="logo.png" alt="Nrithya Collections Logo" class = "container hero-content"/>
+      <img src="logo.png" alt="Nrithya Collections Logo" class="hero-logo" />
       <span class="badge">Palakkad, Kerala</span>
       <h1>Nrithya Collections</h1>
       <p>Handcrafted traditional attire, temple jewellery, hair accessories, and premium Chilanka (Ghungroo) for dancers, academies, and Arangetram performances.</p>
@@ -225,6 +225,92 @@
         <div class="card highlight-card">
           <h3>Custom Tailoring Services</h3>
           <p>Get custom-fitted costumes crafted according to your precise body measurements and style preferences.</p>
+          <p class="tag-list"><strong>Supported Forms:</strong> Bharatanatyam | Mohiniyattam | Kuchipudi</p>
+          <a href="#contact" class="btn btn-secondary">Request Custom Fitting</a>
+        </div>
+
+        <!-- Rental Service -->
+        <div class="card highlight-card">
+          <h3>Rental Solutions</h3>
+          <p>Clean, well-maintained, high-quality costume and jewellery sets available on rental for stage shows, school events, and competitions.</p>
+          <p class="tag-list"><strong>Supported Forms:</strong> All Dance Forms & Accessories</p>
+          <a href="#contact" class="btn btn-secondary">Check Rental Availability</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact & Inquiries</h2>
+      <p class="section-subtitle">Reach out to us directly for price quotes, custom sizes, rental bookings, and bulk orders.</p>
+
+      <div class="grid grid-2">
+        <div class="contact-info">
+          <div class="info-item">
+            <strong>Address:</strong>
+            <p>Nrithya Collections, Palakkad, Kerala - 679552</p>
+          </div>
+          <div class="info-item">
+            <strong>WhatsApp Contact:</strong>
+            <p><a href="https://wa.me/xxxxxxxxxx" target="_blank" rel="noopener">Chat on WhatsApp (xxxxxxxxxx)</a></p>
+          </div>
+          <div class="info-item">
+            <strong>Email:</strong>
+            <p><a href="mailto:nrithyacollections@gmail.com">nrithyacollections@gmail.com</a></p>
+          </div>
+        </div>
+
+        <!-- Quick Inquiry Form -->
+        <form class="contact-form" id="inquiryForm">
+          <h3>Send an Inquiry</h3>
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <select id="danceForm" required>
+              <option value="" disabled selected>Select Dance Form / Item</option>
+              <option value="Bharatanatyam">Bharatanatyam</option>
+              <option value="Mohiniyattam">Mohiniyattam</option>
+              <option value="Kuchipudi">Kuchipudi</option>
+              <option value="Kathakali">Kathakali</option>
+              <option value="Ottamthullal">Ottamthullal</option>
+              <option value="Jewellery & Accessories">Jewellery & Accessories</option>
+              <option value="Chilanka / Ghungroo">Chilanka (Ghungroo)</option>
+              <option value="Complete Pack">Single Complete Pack</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select id="serviceType" required>
+              <option value="" disabled selected>Select Service Required</option>
+              <option value="Purchase">Purchase Costume/Accessories</option>
+              <option value="Customisation">Custom Fitting (Bharatanatyam/Mohiniyattam/Kuchipudi)</option>
+              <option value="Rental">Rental Request</option>
+              <option value="Bulk Order">Bulk Order (Academy / Arangetram)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="4" placeholder="Your requirements, event date, or custom size details..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Inquiry via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Nrithya Collections, Palakkad, Kerala. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>>Get custom-fitted costumes crafted according to your precise body measurements and style preferences.</p>
           <p class="tag-list"><strong>Supported Forms:</strong> Bharatanatyam | Mohiniyattam | Kuchipudi</p>
           <a href="#contact" class="btn btn-secondary">Request Custom Fitting</a>
         </div>
