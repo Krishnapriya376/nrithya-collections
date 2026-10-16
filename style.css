@@ -178,6 +178,18 @@ img {
 
 .hero-content {
   max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero Logo Styling */
+.hero-logo {
+  max-width: 140px;
+  height: auto;
+  margin-bottom: 1.2rem;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
 }
 
 .badge {
@@ -412,165 +424,11 @@ img {
   .hero p {
     font-size: 1rem;
   }
-}er-color);
-    padding: 40px 30px;
-    text-align: center;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(70, 28, 10, 0.05);
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.accessory-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(70, 28, 10, 0.1);
-}
-
-.accessory-icon {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    margin: 0 auto 20px;
-    background: var(--gold-light);
-    color: var(--primary-dark);
-    font-size: 26px;
-}
-
-.accessory-card h3 {
-    font-size: 22px;
-    margin-bottom: 8px;
-    color: var(--primary-dark);
-}
-
-.accessory-card p {
-    font-family: Arial, sans-serif;
-    color: var(--text-muted);
-    margin-bottom: 18px;
-    font-size: 14px;
-}
-
-.card-link {
-    color: var(--gold);
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    display: inline-block;
-}
-
-.card-link:hover {
-    text-decoration: underline;
-}
-
-/* ================= FEATURES GRID ================= */
-.features-section {
-    background: #f4e5cf;
-    padding: 90px 5%;
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    align-items: stretch;
-}
-
-.feature-card {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 32px 24px;
-    border-top: 4px solid var(--gold);
-    border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(70, 28, 10, 0.04);
-}
-
-.feature-number {
-    font-family: Arial, sans-serif;
-    color: var(--gold);
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.feature-card h3 {
-    margin: 12px 0 8px;
-    font-size: 20px;
-    color: var(--primary-dark);
-}
-
-.feature-card p {
-    font-family: Arial, sans-serif;
-    color: var(--text-muted);
-    font-size: 14px;
-}
-
-/* ================= TESTIMONIALS ================= */
-.testimonials-section {
-    background: var(--bg-cream);
-}
-
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 950px;
-    margin: auto;
-    align-items: stretch;
-}
-
-.testimonial-card {
-    background: #fff;
-    padding: 35px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 8px 25px rgba(70, 28, 10, 0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.testimonial-card .feedback {
-    font-style: italic;
-    color: var(--primary-dark);
-    margin-bottom: 20px;
-    font-size: 16px;
-}
-
-.testimonial-card .client-name {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--gold);
-}
-
-.testimonial-card .client-role {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    color: var(--text-muted);
-}
-
-/* ================= FAQ ACCORDION ================= */
-.faq-section {
-    background: #fff;
-    max-width: 100% !important;
-    padding: 90px 5%;
-}
-
-.faq-container {
-    max-width: 800px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.faq-item {
-    background: var(--bg-cream);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
+  
+  .hero-logo {
+    max-width: 110px;
+  }
+}dden;
 }
 
 .faq-question {
