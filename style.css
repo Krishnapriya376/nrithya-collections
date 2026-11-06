@@ -1,4 +1,4 @@
-/* --- Global Styles & Variables --- */
+/* --- Global Variables --- */
 :root {
   --primary: #800020;        /* Deep Traditional Maroon */
   --primary-hover: #5d0017;
@@ -27,7 +27,7 @@ body {
   font-family: var(--font-main);
   line-height: 1.6;
   color: var(--dark);
-  background-color: var(--white);
+  background-color: var(--light);
 }
 
 .container {
@@ -42,15 +42,20 @@ a {
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+/* --- Section Views Control --- */
+.section-view {
+  display: none;
+  padding: 3rem 0;
 }
 
-/* --- Typography Helpers --- */
+.section-view.active {
+  display: block;
+}
+
+/* --- Typography --- */
 .section-title {
   font-size: 2.2rem;
   text-align: center;
@@ -61,8 +66,7 @@ img {
 .section-subtitle {
   text-align: center;
   color: var(--gray);
-  margin-bottom: 2.5rem;
-  font-size: 1.05rem;
+  margin-bottom: 2rem;
 }
 
 /* --- Buttons --- */
@@ -75,6 +79,11 @@ img {
   transition: var(--transition);
   border: none;
   text-align: center;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
 }
 
 .btn-primary {
@@ -100,7 +109,7 @@ img {
   width: 100%;
 }
 
-/* --- Navigation Bar --- */
+/* --- Navbar --- */
 .navbar {
   position: sticky;
   top: 0;
@@ -126,7 +135,6 @@ img {
 .logo-img {
   height: 45px;
   width: auto;
-  object-fit: contain;
 }
 
 .brand-name {
@@ -138,26 +146,28 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
-.nav-links a {
+.nav-item {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--dark);
+  cursor: pointer;
   transition: var(--transition);
 }
 
-.nav-links a:hover {
+.nav-item.active,
+.nav-item:hover {
   color: var(--primary);
+  border-bottom: 2px solid var(--primary);
 }
 
 .btn-nav {
   background-color: var(--secondary);
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  color: var(--dark) !important;
-  font-weight: 600 !important;
+  font-weight: 600;
 }
 
 .nav-toggle {
@@ -174,22 +184,19 @@ img {
   color: var(--white);
   padding: 5rem 0;
   text-align: center;
+  border-radius: 8px;
 }
 
 .hero-content {
-  max-width: 850px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Hero Logo Styling */
 .hero-logo {
-  max-width: 140px;
+  max-width: 130px;
   height: auto;
-  margin-bottom: 1.2rem;
-  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+  margin-bottom: 1rem;
 }
 
 .badge {
@@ -200,35 +207,48 @@ img {
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .hero h1 {
   font-size: 2.8rem;
   margin: 1rem 0;
-  line-height: 1.2;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  max-width: 700px;
 }
 
 .hero-actions {
   display: flex;
   gap: 1rem;
+}
+
+/* --- Category Filters & Catalog --- */
+.filter-tabs {
+  display: flex;
   justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
-/* --- Layout Grids & Cards --- */
-.section {
-  padding: 4.5rem 0;
+.filter-btn {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
 }
 
-.bg-light {
-  background-color: var(--light);
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
 }
 
 .grid {
@@ -237,7 +257,7 @@ img {
 }
 
 .grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .grid-2 {
@@ -250,30 +270,25 @@ img {
   border-radius: 8px;
   padding: 1.5rem;
   position: relative;
-  transition: var(--transition);
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+  align-self: flex-start;
   background-color: #e6f4ea;
   color: #137333;
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 4px;
+  margin-bottom: 0.5rem;
 }
 
 .card h3 {
   color: var(--primary);
-  margin-bottom: 0.75rem;
-  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .card p {
@@ -282,45 +297,58 @@ img {
   margin-bottom: 1rem;
 }
 
-.card ul li {
-  font-size: 0.88rem;
-  color: var(--dark);
-  margin-bottom: 0.4rem;
-  padding-left: 1rem;
-  position: relative;
+/* --- Forms & Portal Containers --- */
+.form-container {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.card ul li::before {
-  content: "•";
-  color: var(--secondary);
-  font-weight: bold;
-  position: absolute;
-  left: 0;
+.interactive-form h3 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
 }
 
-/* --- Complete Packs Section --- */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+/* --- Pack Banner --- */
 .pack-banner {
-  background: linear-gradient(to right, var(--light), #f4ebd9);
+  background: linear-gradient(to right, var(--white), #f4ebd9);
   border: 2px solid var(--secondary);
   border-radius: 12px;
   padding: 2.5rem;
+  text-align: center;
 }
 
 .discount-badge {
-  display: inline-block;
   background-color: var(--primary);
   color: var(--white);
   padding: 0.3rem 0.8rem;
   border-radius: 4px;
   font-weight: 700;
   font-size: 0.85rem;
-  margin-bottom: 1rem;
-}
-
-.pack-content h3 {
-  font-size: 1.8rem;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
 }
 
 .pack-features {
@@ -328,21 +356,10 @@ img {
 }
 
 .pack-features li {
-  font-size: 1.05rem;
   margin-bottom: 0.5rem;
 }
 
-.highlight-card {
-  border-left: 4px solid var(--secondary);
-}
-
-.tag-list {
-  font-size: 0.85rem !important;
-  color: var(--primary) !important;
-  margin-top: 1rem;
-}
-
-/* --- Contact & Forms --- */
+/* --- Contact Section --- */
 .contact-info .info-item {
   margin-bottom: 1.5rem;
 }
@@ -359,48 +376,20 @@ img {
   border-radius: 8px;
 }
 
-.contact-form h3 {
-  margin-bottom: 1.2rem;
-  color: var(--primary);
-}
-
-.form-group {
-  margin-bottom: 1.2rem;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 0.95rem;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-}
-
 /* --- Footer --- */
 .footer {
   background-color: var(--dark);
   color: var(--white);
   text-align: center;
   padding: 1.5rem 0;
-  font-size: 0.9rem;
+  margin-top: 3rem;
 }
 
-/* --- Mobile Responsiveness --- */
+/* --- Responsive --- */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
   }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -412,179 +401,13 @@ img {
     padding: 1.5rem;
     border-bottom: 1px solid var(--border);
   }
-
   .nav-links.active {
     display: flex;
   }
-
   .hero h1 {
     font-size: 2rem;
   }
-
-  .hero p {
-    font-size: 1rem;
-  }
-  
-  .hero-logo {
-    max-width: 110px;
-  }
-}dden;
-}
-
-.faq-question {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 20px;
-    text-align: left;
-    font-size: 16px;
-    font-family: Georgia, serif;
-    font-weight: bold;
-    color: var(--primary-dark);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
-
-.faq-question .arrow {
-    transition: transform 0.3s;
-    font-size: 18px;
-    color: var(--gold);
-}
-
-.faq-item.active .faq-question .arrow {
-    transform: rotate(180deg);
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    padding: 0 20px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: var(--text-muted);
-}
-
-.faq-item.active .faq-answer {
-    max-height: 150px;
-    padding: 0 20px 20px 20px;
-}
-
-/* ================= CTA ================= */
-.cta {
-    background: var(--primary-red);
-    color: white;
-    padding: 60px 8%;
-}
-
-.cta-container {
-    width: min(1180px, 92%);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.cta h2 {
-    font-size: clamp(26px, 4vw, 38px);
-    margin: 5px 0;
-}
-
-.cta p {
-    font-family: Arial, sans-serif;
-    opacity: 0.85;
-}
-
-/* ================= MODAL ================= */
-.modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(30, 6, 6, 0.7);
-    display: grid;
-    place-items: center;
-    z-index: 2000;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease;
-    padding: 20px;
-}
-
-.modal-overlay.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    background: #fffaf3;
-    padding: 35px;
-    border-radius: 16px;
-    max-width: 520px;
-    width: 100%;
-    position: relative;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
-}
-
-.modal-overlay.show .modal-content {
-    transform: translateY(0);
-}
-
-.close-modal {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: transparent;
-    border: none;
-    font-size: 26px;
-    cursor: pointer;
-    color: var(--primary-dark);
-}
-
-.modal-content h2 {
-    font-size: 26px;
-    color: var(--primary-dark);
-    margin: 10px 0 12px;
-}
-
-.modal-content p {
-    font-family: Arial, sans-serif;
-    color: var(--text-muted);
-    font-size: 14px;
-    margin-bottom: 22px;
-}
-
-/* ================= FOOTER ================= */
-.footer {
-    background: #210d0d;
-    color: #eadbca;
-}
-
-.footer-main {
-    width: min(1180px, 92%);
-    margin: auto;
-    padding: 60px 0 40px;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1.5fr;
-    gap: 40px;
-}
-
-.footer-logo {
-    width: 160px;
-    background: #fffaf3;
-    border-radius: 6px;
-    margin-bottom: 12px;
-    padding: 4px;
-}
-
-.footer-brand p {
-    font-family: Arial, sans-serif;
-    color: #bca99a;
-    max-width: 330px;
+}: 330px;
     font-size: 13px;
 }
 
