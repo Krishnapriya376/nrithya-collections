@@ -1,52 +1,147 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Dynamic Footer Year
+  const WHATSAPP_NUMBER = "xxxxxxxxxx"; // Replace with your phone number
+
+  // 1. Dynamic Year
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  // 2. Mobile Navigation Toggle
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.getElementById("navLinks");
+  // 2. Navigation View Switcher (Single Page App Behavior)
+  const navItems = document.querySelectorAll(".nav-item, .nav-trigger");
+  const sectionViews = document.querySelectorAll(".section-view");
+  const navLinksContainer = document.getElementById("navLinks");
 
-  if (navToggle && navLinks) {
-    navToggle.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
+  function switchView(targetId) {
+    sectionViews.forEach((section) => {
+      if (section.id === targetId) {
+        section.classList.add("active");
+      } else {
+        section.classList.remove("active");
+      }
     });
 
-    // Close menu when clicking outside or clicking links
-    document.querySelectorAll(".nav-links a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-      });
+    document.querySelectorAll(".nav-item").forEach((item) => {
+      if (item.getAttribute("data-target") === targetId) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+
+    if (navLinksContainer) {
+      navLinksContainer.classList.remove("active");
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = this.getAttribute("data-target");
+      if (target) {
+        switchView(target);
+      }
+    });
+  });
+
+  // Mobile Nav Toggle
+  const navToggle = document.getElementById("navToggle");
+  if (navToggle && navLinksContainer) {
+    navToggle.addEventListener("click", () => {
+      navLinksContainer.classList.toggle("active");
     });
   }
 
-  // 3. WhatsApp Direct Order Generator Form
-  const inquiryForm = document.getElementById("inquiryForm");
-  if (inquiryForm) {
-    inquiryForm.addEventListener("submit", function (e) {
+  // 3. Catalog Filter Tabs
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const catalogItems = document.querySelectorAll(".catalog-item");
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      this.classList.add("active");
+
+      const filter = this.getAttribute("data-filter");
+
+      catalogItems.forEach((item) => {
+        if (filter === "all" || item.getAttribute("data-category") === filter) {
+          item.style.display = "flex";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+
+  // 4. Quick Catalog Item Inquiry Buttons
+  document.querySelectorAll(".inquire-item").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const itemName = this.getAttribute("data-item");
+      const text = `Hello Nrithya Collections,\n\nI am interested in inquiring about the following item:\n• *Item:* ${itemName}\n\nPlease share price, sizing, and availability details.`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
+    });
+  });
+
+  // 5. Custom Measurement Form Handler
+  const customFittingForm = document.getElementById("customFittingForm");
+  if (customFittingForm) {
+    customFittingForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const name = document.getElementById("name").value.trim();
-      const danceForm = document.getElementById("danceForm").value;
-      const serviceType = document.getElementById("serviceType").value;
-      const message = document.getElementById("message").value.trim();
+      const danceForm = document.getElementById("fitDanceForm").value;
+      const chest = document.getElementById("chestSize").value;
+      const waist = document.getElementById("waistSize").value;
+      const hip = document.getElementById("hipSize").value;
+      const length = document.getElementById("lengthSize").value;
+      const fabric = document.getElementById("fabricPreference").value;
 
-      // Form text message
-      const text = `Hello Nrithya Collections,\n\nI would like to inquire about the following details:\n\n` +
+      const text = `Hello Nrithya Collections,\n\nI would like to place a *Custom Fitting Order*:\n` +
+        `• *Dance Form:* ${danceForm}\n` +
+        `• *Bust/Chest:* ${chest} inches\n` +
+        `• *Waist:* ${waist} inches\n` +
+        `• *Hip:* ${hip} inches\n` +
+        `• *Full Length:* ${length} inches\n` +
+        `• *Fabric:* ${fabric}\n\nPlease let me know the cost and completion timeline.`;
+
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
+    });
+  }
+
+  // 6. Rental Booking Form Handler
+  const rentalBookingForm = document.getElementById("rentalBookingForm");
+  if (rentalBookingForm) {
+    rentalBookingForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const item = document.getElementById("rentalItem").value;
+      const startDate = document.getElementById("startDate").value;
+      const duration = document.getElementById("duration").value;
+
+      const text = `Hello Nrithya Collections,\n\nI would like to check *Rental Availability*:\n` +
+        `• *Item:* ${item}\n` +
+        `• *Start Date:* ${startDate}\n` +
+        `• *Duration:* ${duration} day(s)\n\nPlease confirm availability and rental terms.`;
+
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
+    });
+  }
+
+  // 7. General Inquiry Form Handler
+  const generalInquiryForm = document.getElementById("generalInquiryForm");
+  if (generalInquiryForm) {
+    generalInquiryForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("genName").value.trim();
+      const message = document.getElementById("genMessage").value.trim();
+
+      const text = `Hello Nrithya Collections,\n\n` +
         `• *Name:* ${name}\n` +
-        `• *Dance Form/Item:* ${danceForm}\n` +
-        `• *Service:* ${serviceType}\n` +
-        `• *Details:* ${message}\n\n` +
-        `Please send me details regarding availability and pricing. Thank you!`;
+        `• *Message:* ${message}`;
 
-      // Encoded URL for WhatsApp Redirect
-      const encodedText = encodeURIComponent(text);
-      const whatsappURL = `https://wa.me/xxxxxxxxxx?text=${encodedText}`;
-
-      // Open WhatsApp chat in a new tab
-      window.open(whatsappURL, "_blank");
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
     });
   }
 });
