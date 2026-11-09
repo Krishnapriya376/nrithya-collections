@@ -1,752 +1,800 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nrithya Collections | Dance Costumes & Accessories</title>
+    <meta name="description"
+        content="Nrithya Collections - Complete Dance Costume and Accessories Hub in Palakkad, Kerala.">
 
-<style>
+    <title>Nrithya Collections | Dance Costumes & Accessories</title>
 
-/* ================= GENERAL ================= */
+    <link rel="stylesheet" href="style.css">
+</head>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<body>
 
-html {
-    scroll-behavior: smooth;
-}
+<!-- ================= HEADER ================= -->
 
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: #fffaf0;
-    color: #3d211d;
-    line-height: 1.6;
-}
+<header>
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+    <div class="container header-container">
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+        <a href="#home" class="logo-link">
+            <img src="logo.png"
+                 alt="Nrithya Collections Logo"
+                 class="logo">
+        </a>
 
+        <button class="menu-button" id="menuButton" aria-label="Open Menu">
+            ☰
+        </button>
 
-/* ================= HEADER ================= */
+        <nav id="mainNav">
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+            <a href="#home">Home</a>
 
-    background: rgba(255, 250, 240, 0.97);
+            <a href="#costumes">Costumes</a>
 
-    border-bottom: 1px solid #d8b56a;
+            <a href="#accessories">Accessories</a>
 
-    box-shadow: 0 3px 15px rgba(60, 20, 15, 0.12);
-}
+            <a href="#services">Services</a>
 
-.header-container {
-    min-height: 90px;
+            <a href="#offers">Offers</a>
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+            <a href="#contact">Contact</a>
 
-    gap: 25px;
-}
+        </nav>
 
-.logo {
-    width: 155px;
-    display: block;
-}
+    </div>
 
-nav {
-    display: flex;
-    gap: 25px;
+</header>
 
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-}
 
-nav a {
-    color: #4d1018;
-    padding: 8px 0;
+<!-- ================= MAIN ================= -->
 
-    position: relative;
-}
+<main>
 
-nav a::after {
-    content: "";
 
-    position: absolute;
-    left: 0;
-    bottom: 0;
+<!-- ================= HERO ================= -->
 
-    width: 0;
-    height: 2px;
+<section class="hero" id="home">
 
-    background: #b88622;
+    <div class="hero-content">
 
-    transition: 0.3s;
-}
+        <p class="eyebrow">
+            Tradition • Elegance • Performance
+        </p>
 
-nav a:hover {
-    color: #b88622;
-}
+        <h1>
+            Celebrate Every Dance
+            <br>
+            <span>With the Perfect Look</span>
+        </h1>
 
-nav a:hover::after {
-    width: 100%;
-}
+        <p class="hero-description">
 
+            Nrithya Collections is a complete dance costume
+            and accessories hub bringing together traditional
+            classical dance costumes, jewellery, ghungroo
+            and performance essentials in one place.
 
-/* ================= HERO ================= */
+        </p>
 
-.hero {
-    min-height: 650px;
+        <a href="#costumes" class="button">
+            Explore
+        </a>
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    </div>
 
-    text-align: center;
+</section>
 
-    padding: 70px 20px;
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(190, 145, 45, 0.20),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #fffdf7,
-            #f8e8bd,
-            #fffaf0
-        );
 
-    position: relative;
-    overflow: hidden;
-}
+<!-- ================= ABOUT ================= -->
 
-.hero::before {
-    content: "✦";
+<section class="section">
 
-    position: absolute;
-    top: 60px;
-    left: 8%;
+    <div class="container">
 
-    font-size: 90px;
+        <div class="section-heading">
 
-    color: rgba(150, 100, 20, 0.12);
-}
+            <p class="eyebrow">
+                Welcome to Nrithya Collections
+            </p>
 
-.hero::after {
-    content: "✦";
+            <h2>
+                Where Tradition Meets Elegance
+            </h2>
 
-    position: absolute;
-    bottom: 50px;
-    right: 8%;
+            <p>
+                Discover carefully selected dance costumes,
+                traditional jewellery and accessories designed
+                to complete your classical dance appearance.
+            </p>
 
-    font-size: 90px;
+        </div>
 
-    color: rgba(150, 100, 20, 0.12);
-}
 
-.hero-content {
-    max-width: 850px;
-    position: relative;
-    z-index: 2;
-}
+        <div class="intro-grid">
 
-.eyebrow {
-    color: #b88622;
+            <div class="intro-card">
 
-    font-family: Arial, sans-serif;
+                <div class="icon">
+                    ✦
+                </div>
 
-    font-size: 12px;
-    font-weight: bold;
+                <h3>
+                    Traditional Collection
+                </h3>
 
-    letter-spacing: 3px;
+                <p>
+                    Classical dance costumes and accessories
+                    inspired by India's rich performing arts traditions.
+                </p>
 
-    text-transform: uppercase;
-}
+            </div>
 
-.hero h1 {
-    color: #4d1018;
 
-    font-size: clamp(42px, 7vw, 76px);
+            <div class="intro-card">
 
-    line-height: 1.05;
+                <div class="icon">
+                    ❖
+                </div>
 
-    margin: 18px 0;
-}
+                <h3>
+                    Complete Dance Packages
+                </h3>
 
-.hero h1 span {
-    color: #b88622;
-}
+                <p>
+                    Convenient combinations of costumes and
+                    essential accessories for different dance forms.
+                </p>
 
-.hero-description {
-    max-width: 700px;
+            </div>
 
-    margin: 0 auto 30px;
 
-    color: #69564d;
+            <div class="intro-card">
 
-    font-family: Arial, sans-serif;
+                <div class="icon">
+                    ◈
+                </div>
 
-    font-size: 16px;
-}
+                <h3>
+                    One-Stop Dance Hub
+                </h3>
 
-.button {
-    display: inline-block;
+                <p>
+                    Costumes, jewellery, ghungroo and other
+                    dance essentials brought together in one place.
+                </p>
 
-    padding: 13px 32px;
+            </div>
 
-    border-radius: 30px;
+        </div>
 
-    background: #59121a;
+    </div>
 
-    color: white;
+</section>
 
-    font-family: Arial, sans-serif;
 
-    font-weight: bold;
 
-    border: 1px solid #59121a;
+<!-- ================= DANCE COSTUMES ================= -->
 
-    transition: 0.3s;
-}
+<section class="section pale" id="costumes">
 
-.button:hover {
-    background: #b88622;
+    <div class="container">
 
-    border-color: #b88622;
+        <div class="section-heading">
 
-    transform: translateY(-3px);
-}
+            <p class="eyebrow">
+                Dance Costumes
+            </p>
 
+            <h2>
+                Classical Dance Costume Collection
+            </h2>
 
-/* ================= COMMON SECTION ================= */
+            <p>
+                Explore traditional costume collections available
+                for different classical dance performances.
+            </p>
 
-.section {
-    padding: 85px 0;
-}
+        </div>
 
-.section.pale {
-    background: #fff3cd;
-}
 
-.section-heading {
-    max-width: 720px;
+        <div class="dance-grid">
 
-    margin: 0 auto 50px;
 
-    text-align: center;
-}
+            <div class="dance-card">
 
-.section-heading h2 {
-    color: #541018;
+                <div class="dance-content">
 
-    font-size: clamp(30px, 4vw, 46px);
+                    <span class="dance-number">
+                        01
+                    </span>
 
-    margin: 8px 0 12px;
-}
+                    <h3>
+                        Bharatanatyam
+                    </h3>
 
-.section-heading p:last-child {
-    color: #756258;
+                </div>
 
-    font-family: Arial, sans-serif;
-}
+            </div>
 
 
-/* ================= INTRO ================= */
 
-.intro-grid {
-    display: grid;
+            <div class="dance-card">
 
-    grid-template-columns: repeat(3, 1fr);
+                <div class="dance-content">
 
-    gap: 22px;
-}
+                    <span class="dance-number">
+                        02
+                    </span>
 
-.intro-card {
-    background: #fffdf8;
+                    <h3>
+                        Mohiniyattam
+                    </h3>
 
-    border: 1px solid #e4cd91;
+                </div>
 
-    border-radius: 15px;
+            </div>
 
-    padding: 32px 25px;
 
-    text-align: center;
 
-    box-shadow: 0 8px 25px rgba(70, 25, 15, 0.07);
+            <div class="dance-card">
 
-    transition: 0.3s;
-}
+                <div class="dance-content">
 
-.intro-card:hover {
-    transform: translateY(-6px);
-}
+                    <span class="dance-number">
+                        03
+                    </span>
 
-.icon {
-    width: 65px;
-    height: 65px;
+                    <h3>
+                        Kuchipudi
+                    </h3>
 
-    margin: auto auto 18px;
+                </div>
 
-    border-radius: 50%;
+            </div>
 
-    display: grid;
-    place-items: center;
 
-    background: #fff0c4;
 
-    color: #59121a;
+            <div class="dance-card">
 
-    font-size: 28px;
-}
+                <div class="dance-content">
 
-.intro-card h3 {
-    color: #59121a;
+                    <span class="dance-number">
+                        04
+                    </span>
 
-    font-size: 22px;
+                    <h3>
+                        Kathakali
+                    </h3>
 
-    margin-bottom: 8px;
-}
+                </div>
 
-.intro-card p {
-    color: #756258;
+            </div>
 
-    font-family: Arial, sans-serif;
 
-    font-size: 14px;
-}
 
+            <div class="dance-card">
 
-/* ================= DANCE COSTUMES ================= */
+                <div class="dance-content">
 
-.dance-grid {
-    display: grid;
+                    <span class="dance-number">
+                        05
+                    </span>
 
-    grid-template-columns: repeat(5, 1fr);
+                    <h3>
+                        Ottamthullal
+                    </h3>
 
-    gap: 17px;
-}
+                </div>
 
-.dance-card {
-    min-height: 200px;
+            </div>
 
-    padding: 25px 18px;
 
-    display: flex;
-    align-items: flex-end;
+        </div>
 
-    position: relative;
+    </div>
 
-    overflow: hidden;
+</section>
 
-    border-radius: 15px;
 
-    color: white;
 
-    background:
-        linear-gradient(
-            145deg,
-            #5b1119,
-            #b37a18
-        );
+<!-- ================= ACCESSORIES ================= -->
 
-    box-shadow: 0 9px 22px rgba(70, 25, 15, 0.15);
+<section class="section" id="accessories">
 
-    transition: 0.3s;
-}
+    <div class="container">
 
-.dance-card:nth-child(even) {
-    background:
-        linear-gradient(
-            145deg,
-            #a36c13,
-            #5a1119
-        );
-}
+        <div class="section-heading">
 
-.dance-card:hover {
-    transform: translateY(-7px);
-}
+            <p class="eyebrow">
+                Dance Accessories
+            </p>
 
-.dance-card::before {
-    content: "✦";
+            <h2>
+                Complete Your Dance Look
+            </h2>
 
-    position: absolute;
+            <p>
+                Traditional accessories and performance essentials
+                to complement your dance costume.
+            </p>
 
-    top: 8px;
-    right: 12px;
+        </div>
 
-    font-size: 65px;
 
-    color: rgba(255,255,255,0.15);
-}
+        <div class="accessory-grid">
 
-.dance-content {
-    position: relative;
-    z-index: 2;
-}
 
-.dance-number {
-    font-family: Arial, sans-serif;
+            <!-- TEMPLE JEWELLERY -->
 
-    font-size: 11px;
+            <div class="accessory-card">
 
-    letter-spacing: 2px;
+                <span class="accessory-tag">
+                    Jewellery
+                </span>
 
-    opacity: 0.75;
-}
+                <h3>
+                    Temple Jewellery Collection
+                </h3>
 
-.dance-card h3 {
-    font-size: 21px;
+                <p>
+                    Traditional temple-style jewellery designed
+                    to complement classical dance costumes.
+                </p>
 
-    margin-top: 5px;
-}
+                <ul class="accessory-list">
 
+                    <li>
+                        Necklaces and harams
+                    </li>
 
-/* ================= ACCESSORIES ================= */
+                    <li>
+                        Temple-style earrings
+                    </li>
 
-.accessory-grid {
-    display: grid;
+                    <li>
+                        Head and forehead ornaments
+                    </li>
 
-    grid-template-columns: repeat(2, 1fr);
+                    <li>
+                        Traditional bangles and armlets
+                    </li>
 
-    gap: 25px;
-}
+                </ul>
 
-.accessory-card {
-    background: #fffdf8;
+            </div>
 
-    border: 1px solid #e3cc91;
 
-    border-radius: 16px;
 
-    padding: 32px;
+            <!-- GHUNGROO -->
 
-    box-shadow: 0 8px 25px rgba(70, 25, 15, 0.07);
+            <div class="accessory-card">
 
-    transition: 0.3s;
-}
+                <span class="accessory-tag">
+                    Dance Essential
+                </span>
 
-.accessory-card:hover {
-    transform: translateY(-5px);
-}
+                <h3>
+                    Ghungroo
+                </h3>
 
-.accessory-card h3 {
-    color: #59121a;
+                <p>
+                    Traditional dance bells suitable for dance
+                    practice, training and stage performances.
+                </p>
 
-    font-size: 24px;
+                <ul class="accessory-list">
 
-    margin-bottom: 10px;
-}
+                    <li>
+                        Traditional dance bells
+                    </li>
 
-.accessory-card p {
-    color: #705e54;
+                    <li>
+                        Different sizes and styles
+                    </li>
 
-    font-family: Arial, sans-serif;
+                    <li>
+                        Suitable for classical dance practice
+                    </li>
 
-    font-size: 14px;
-}
+                </ul>
 
-.accessory-list {
-    margin-top: 15px;
+            </div>
 
-    padding-left: 20px;
 
-    color: #705e54;
 
-    font-family: Arial, sans-serif;
+            <!-- KATHAKALI -->
 
-    font-size: 14px;
-}
+            <div class="accessory-card">
 
-.accessory-list li {
-    margin: 6px 0;
-}
+                <span class="accessory-tag">
+                    Complete Set
+                </span>
 
-.accessory-tag {
-    display: inline-block;
+                <h3>
+                    Kathakali Accessories Set
+                </h3>
 
-    margin-bottom: 12px;
+                <p>
+                    A coordinated collection of traditional
+                    accessories required to complete the Kathakali look.
+                </p>
 
-    padding: 5px 12px;
+                <ul class="accessory-list">
 
-    border-radius: 20px;
+                    <li>
+                        Head accessories
+                    </li>
 
-    background: #fff0c4;
+                    <li>
+                        Face and forehead accessories
+                    </li>
 
-    color: #8a6014;
+                    <li>
+                        Neck and chest ornaments
+                    </li>
 
-    font-family: Arial, sans-serif;
+                    <li>
+                        Arm and wrist accessories
+                    </li>
 
-    font-size: 11px;
+                    <li>
+                        Traditional costume adornments
+                    </li>
 
-    font-weight: bold;
+                </ul>
 
-    text-transform: uppercase;
-}
+            </div>
 
 
-/* ================= SERVICES ================= */
 
-.service-grid {
-    display: grid;
+            <!-- OTTAMTHULLAL -->
 
-    grid-template-columns: repeat(4, 1fr);
+            <div class="accessory-card">
 
-    gap: 20px;
-}
+                <span class="accessory-tag">
+                    Complete Set
+                </span>
 
-.service-card {
-    background:
-        linear-gradient(
-            145deg,
-            #fffdf8,
-            #fff1c5
-        );
+                <h3>
+                    Ottamthullal Accessories Set
+                </h3>
 
-    border: 1px solid #e0c884;
+                <p>
+                    A coordinated traditional accessory collection
+                    for completing an Ottamthullal performance appearance.
+                </p>
 
-    border-radius: 15px;
+                <ul class="accessory-list">
 
-    padding: 30px 22px;
+                    <li>
+                        Traditional head accessories
+                    </li>
 
-    box-shadow: 0 8px 22px rgba(70, 25, 15, 0.06);
+                    <li>
+                        Neck ornaments
+                    </li>
 
-    transition: 0.3s;
-}
+                    <li>
+                        Waist accessories
+                    </li>
 
-.service-card:hover {
-    transform: translateY(-6px);
-}
+                    <li>
+                        Traditional performance adornments
+                    </li>
 
-.service-icon {
-    font-size: 30px;
+                </ul>
 
-    color: #b88622;
-}
+            </div>
 
-.service-card h3 {
-    color: #59121a;
 
-    font-size: 21px;
+        </div>
 
-    margin: 10px 0;
-}
+    </div>
 
-.service-card p {
-    color: #705e54;
+</section>
 
-    font-family: Arial, sans-serif;
 
-    font-size: 14px;
-}
 
+<!-- ================= SERVICES ================= -->
 
-/* ================= DISCOUNT OFFERS ================= */
+<section class="section pale" id="services">
 
-.offers {
-    padding: 80px 0;
+    <div class="container">
 
-    background:
-        radial-gradient(
-            circle at 80% 30%,
-            rgba(214,170,60,0.18),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #2b080d,
-            #59121a
-        );
+        <div class="section-heading">
 
-    color: white;
-}
+            <p class="eyebrow">
+                Our Services
+            </p>
 
-.offers .section-heading h2 {
-    color: white;
-}
+            <h2>
+                Services for Every Dance Occasion
+            </h2>
 
-.offers .section-heading p:last-child {
-    color: #eadfc8;
-}
+            <p>
+                Flexible options for individual performers,
+                special occasions, institutions and dance academies.
+            </p>
 
-.offer-grid {
-    display: grid;
+        </div>
 
-    grid-template-columns: repeat(3, 1fr);
 
-    gap: 22px;
-}
+        <div class="service-grid">
 
-.offer-card {
-    padding: 30px;
 
-    border: 1px solid rgba(228,195,106,0.5);
+            <div class="service-card">
 
-    border-radius: 15px;
+                <div class="service-icon">
+                    ♢
+                </div>
 
-    background: rgba(255,255,255,0.07);
-}
+                <h3>
+                    Rentals
+                </h3>
 
-.offer-card h3 {
-    color: #e7c66e;
+                <p>
+                    Costumes and selected accessories are available
+                    for rental for performances and special occasions.
+                </p>
 
-    font-size: 22px;
+            </div>
 
-    margin-bottom: 10px;
-}
 
-.offer-card p {
-    color: #f5ead8;
 
-    font-family: Arial, sans-serif;
+            <div class="service-card">
 
-    font-size: 14px;
-}
+                <div class="service-icon">
+                    ✦
+                </div>
 
+                <h3>
+                    Arangetram
+                </h3>
 
-/* ================= CTA ================= */
+                <p>
+                    Dance costume and accessory collections
+                    for your important Arangetram performance.
+                </p>
 
-.cta {
-    padding: 75px 20px;
+            </div>
 
-    text-align: center;
 
-    background: #f4e3b5;
-}
 
-.cta h2 {
-    color: #541018;
+            <div class="service-card">
 
-    font-size: clamp(30px, 4vw, 45px);
+                <div class="service-icon">
+                    ❖
+                </div>
 
-    margin: 8px 0 12px;
-}
+                <h3>
+                    Bulk Orders
+                </h3>
 
-.cta p {
-    max-width: 700px;
+                <p>
+                    Bulk costume and accessory orders for
+                    institutions, dance academies and performance groups.
+                </p>
 
-    margin: auto auto 25px;
+            </div>
 
-    color: #705e54;
 
-    font-family: Arial, sans-serif;
-}
 
+            <div class="service-card">
 
-/* ================= FOOTER ================= */
+                <div class="service-icon">
+                    ✥
+                </div>
 
-footer {
-    background: #24090d;
+                <h3>
+                    Customisation
+                </h3>
 
-    color: #eee0ca;
-}
+                <p>
+                    Customisation options are available for
+                    Bharatanatyam, Mohiniyattam and Kuchipudi costumes.
+                </p>
 
-.footer-container {
-    padding: 60px 0 40px;
+            </div>
 
-    display: grid;
 
-    grid-template-columns: 1.3fr 1fr;
+        </div>
 
-    gap: 60px;
-}
+    </div>
 
-.footer-logo {
-    width: 200px;
+</section>
 
-    background: #fffaf0;
 
-    border-radius: 5px;
 
-    padding: 5px;
+<!-- ================= OFFERS ================= -->
 
-    margin-bottom: 15px;
-}
+<section class="offers" id="offers">
 
-.footer-description {
-    max-width: 450px;
+    <div class="container">
 
-    color: #cdbbab;
+        <div class="section-heading">
 
-    font-family: Arial, sans-serif;
+            <p class="eyebrow">
+                Special Offers
+            </p>
 
-    font-size: 14px;
-}
+            <h2>
+                Exclusive Dance Collection Offers
+            </h2>
 
-.footer h3 {
-    color: #e2b85b;
+            <p>
+                Enjoy attractive discounts when you choose
+                complete packs, combinations or bulk orders.
+            </p>
 
-    margin-bottom: 15px;
-}
+        </div>
 
-.footer p {
-    color: #cdbbab;
 
-    font-family: Arial, sans-serif;
+        <div class="offer-grid">
 
-    font-size: 14px;
 
-    margin: 6px 0;
-}
+            <div class="offer-card">
 
-.footer strong {
-    color: #f3e6cf;
-}
+                <h3>
+                    Complete Pack Discount
+                </h3>
 
-.copyright {
-    padding: 18px;
+                <p>
+                    Special discounts are available on selected
+                    single complete dance costume and accessory packs.
+                </p>
 
-    text-align: center;
+            </div>
 
-    border-top: 1px solid rgba(255,255,255,0.12);
 
-    color: #a99686;
 
-    font-family: Arial, sans-serif;
+            <div class="offer-card">
 
-    font-size: 12px;
-}
+                <h3>
+                    Bulk Order Offers
+                </h3>
 
+                <p>
+                    Institutions, academies and dance groups
+                    can receive attractive offers on bulk orders.
+                </p>
 
-/* ================= MOBILE ================= */
+            </div>
 
-@media(max-width: 1050px) {
 
-    .dance-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+            <div class="offer-card">
 
+                <h3>
+                    Combo Savings
+                </h3>
 
-@media(max-width: 750px) {
+                <p>
+                    Save more by selecting suitable costume
+                    and accessory combinations together.
+                </p>
 
-    .header-container {
-        flex-direction: column;
+            </div>
 
-        padding: 15px 0;
-    }
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            Ready for Your Next Performance?
+        </p>
+
+        <h2>
+            Find Your Perfect Dance Collection
+        </h2>
+
+        <p>
+            Explore traditional costumes, jewellery and accessories
+            and create the perfect look for your next performance.
+        </p>
+
+        <a href="#contact" class="button">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="container footer-container">
+
+
+        <div>
+
+            <img
+                src="logo.png"
+                alt="Nrithya Collections Logo"
+                class="footer-logo">
+
+            <p class="footer-description">
+
+                Complete Dance Costume and Accessories Hub
+                for classical dance performers, institutions
+                and dance academies.
+
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <p>
+                <strong>
+                    Nrithya Collections
+                </strong>
+            </p>
+
+            <p>
+                Palakkad, Kerala - 679552
+            </p>
+
+            <p>
+                WhatsApp : XXXXXXXXXX
+            </p>
+
+            <p>
+                Mail : nrithyacollections@gmail.com
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Nrithya Collections.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```  }
 
     .logo {
         width: 135px;
