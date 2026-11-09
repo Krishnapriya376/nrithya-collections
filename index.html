@@ -1,435 +1,2345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Nrithya Collections | Classical Dance Costumes, Rentals & Custom Tailoring</title>
-  <meta name="description" content="Explore classical Indian dance costumes, temple jewellery, hair accessories, and Chilanka (Ghungroo) for Bharatanatyam, Mohiniyattam, Kuchipudi, Kathakali, & Ottamthullal." />
-  <meta name="keywords" content="Bharatanatyam costumes, Mohiniyattam dress, Kuchipudi costume, Kathakali aharya, Ottamthullal dress, temple jewellery, Chilanka, Ghungroo, dance costume rental, Palakkad Kerala" />
-  <meta name="robots" content="index, follow" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css" />
+<title>Nrithya Collections | Dance Costumes & Accessories</title>
 
-  <!-- Structured Data / JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Nrithya Collections",
-    "image": "logo.png",
-    "telephone": "xxxxxxxxxx",
-    "email": "nrithyacollections@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Palakkad",
-      "addressRegion": "Kerala",
-      "postalCode": "679552",
-      "addressCountry": "IN"
+<style>
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fffaf0;
+    color: #3d211d;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 250, 240, 0.97);
+
+    border-bottom: 1px solid #d8b56a;
+
+    box-shadow: 0 3px 15px rgba(60, 20, 15, 0.12);
+}
+
+.header-container {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.logo {
+    width: 155px;
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #4d1018;
+    padding: 8px 0;
+
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #b88622;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b88622;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(190, 145, 45, 0.20),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fffdf7,
+            #f8e8bd,
+            #fffaf0
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "✦";
+
+    position: absolute;
+    top: 60px;
+    left: 8%;
+
+    font-size: 90px;
+
+    color: rgba(150, 100, 20, 0.12);
+}
+
+.hero::after {
+    content: "✦";
+
+    position: absolute;
+    bottom: 50px;
+    right: 8%;
+
+    font-size: 90px;
+
+    color: rgba(150, 100, 20, 0.12);
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: #b88622;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    color: #4d1018;
+
+    font-size: clamp(42px, 7vw, 76px);
+
+    line-height: 1.05;
+
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: #b88622;
+}
+
+.hero-description {
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+
+    color: #69564d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 13px 32px;
+
+    border-radius: 30px;
+
+    background: #59121a;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    border: 1px solid #59121a;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #b88622;
+
+    border-color: #b88622;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================= COMMON SECTION ================= */
+
+.section {
+    padding: 85px 0;
+}
+
+.section.pale {
+    background: #fff3cd;
+}
+
+.section-heading {
+    max-width: 720px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: #541018;
+
+    font-size: clamp(30px, 4vw, 46px);
+
+    margin: 8px 0 12px;
+}
+
+.section-heading p:last-child {
+    color: #756258;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================= INTRO ================= */
+
+.intro-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.intro-card {
+    background: #fffdf8;
+
+    border: 1px solid #e4cd91;
+
+    border-radius: 15px;
+
+    padding: 32px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(70, 25, 15, 0.07);
+
+    transition: 0.3s;
+}
+
+.intro-card:hover {
+    transform: translateY(-6px);
+}
+
+.icon {
+    width: 65px;
+    height: 65px;
+
+    margin: auto auto 18px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background: #fff0c4;
+
+    color: #59121a;
+
+    font-size: 28px;
+}
+
+.intro-card h3 {
+    color: #59121a;
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.intro-card p {
+    color: #756258;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* ================= DANCE COSTUMES ================= */
+
+.dance-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 17px;
+}
+
+.dance-card {
+    min-height: 200px;
+
+    padding: 25px 18px;
+
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            #5b1119,
+            #b37a18
+        );
+
+    box-shadow: 0 9px 22px rgba(70, 25, 15, 0.15);
+
+    transition: 0.3s;
+}
+
+.dance-card:nth-child(even) {
+    background:
+        linear-gradient(
+            145deg,
+            #a36c13,
+            #5a1119
+        );
+}
+
+.dance-card:hover {
+    transform: translateY(-7px);
+}
+
+.dance-card::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 8px;
+    right: 12px;
+
+    font-size: 65px;
+
+    color: rgba(255,255,255,0.15);
+}
+
+.dance-content {
+    position: relative;
+    z-index: 2;
+}
+
+.dance-number {
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.75;
+}
+
+.dance-card h3 {
+    font-size: 21px;
+
+    margin-top: 5px;
+}
+
+
+/* ================= ACCESSORIES ================= */
+
+.accessory-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.accessory-card {
+    background: #fffdf8;
+
+    border: 1px solid #e3cc91;
+
+    border-radius: 16px;
+
+    padding: 32px;
+
+    box-shadow: 0 8px 25px rgba(70, 25, 15, 0.07);
+
+    transition: 0.3s;
+}
+
+.accessory-card:hover {
+    transform: translateY(-5px);
+}
+
+.accessory-card h3 {
+    color: #59121a;
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+.accessory-card p {
+    color: #705e54;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+.accessory-list {
+    margin-top: 15px;
+
+    padding-left: 20px;
+
+    color: #705e54;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+.accessory-list li {
+    margin: 6px 0;
+}
+
+.accessory-tag {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background: #fff0c4;
+
+    color: #8a6014;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+
+/* ================= SERVICES ================= */
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #fff1c5
+        );
+
+    border: 1px solid #e0c884;
+
+    border-radius: 15px;
+
+    padding: 30px 22px;
+
+    box-shadow: 0 8px 22px rgba(70, 25, 15, 0.06);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+}
+
+.service-icon {
+    font-size: 30px;
+
+    color: #b88622;
+}
+
+.service-card h3 {
+    color: #59121a;
+
+    font-size: 21px;
+
+    margin: 10px 0;
+}
+
+.service-card p {
+    color: #705e54;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* ================= DISCOUNT OFFERS ================= */
+
+.offers {
+    padding: 80px 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(214,170,60,0.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #2b080d,
+            #59121a
+        );
+
+    color: white;
+}
+
+.offers .section-heading h2 {
+    color: white;
+}
+
+.offers .section-heading p:last-child {
+    color: #eadfc8;
+}
+
+.offer-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.offer-card {
+    padding: 30px;
+
+    border: 1px solid rgba(228,195,106,0.5);
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.07);
+}
+
+.offer-card h3 {
+    color: #e7c66e;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.offer-card p {
+    color: #f5ead8;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* ================= CTA ================= */
+
+.cta {
+    padding: 75px 20px;
+
+    text-align: center;
+
+    background: #f4e3b5;
+}
+
+.cta h2 {
+    color: #541018;
+
+    font-size: clamp(30px, 4vw, 45px);
+
+    margin: 8px 0 12px;
+}
+
+.cta p {
+    max-width: 700px;
+
+    margin: auto auto 25px;
+
+    color: #705e54;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #24090d;
+
+    color: #eee0ca;
+}
+
+.footer-container {
+    padding: 60px 0 40px;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr;
+
+    gap: 60px;
+}
+
+.footer-logo {
+    width: 200px;
+
+    background: #fffaf0;
+
+    border-radius: 5px;
+
+    padding: 5px;
+
+    margin-bottom: 15px;
+}
+
+.footer-description {
+    max-width: 450px;
+
+    color: #cdbbab;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+.footer h3 {
+    color: #e2b85b;
+
+    margin-bottom: 15px;
+}
+
+.footer p {
+    color: #cdbbab;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    margin: 6px 0;
+}
+
+.footer strong {
+    color: #f3e6cf;
+}
+
+.copyright {
+    padding: 18px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+
+    color: #a99686;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 1050px) {
+
+    .dance-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
-  }
-  </script>
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media(max-width: 750px) {
+
+    .header-container {
+        flex-direction: column;
+
+        padding: 15px 0;
+    }
+
+    .logo {
+        width: 135px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px 16px;
+
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .intro-grid,
+    .dance-grid,
+    .accessory-grid,
+    .service-grid,
+    .offer-grid,
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .dance-card {
+        min-height: 170px;
+    }
+
+    .footer-container {
+        gap: 35px;
+    }
+}
+
+</style>
 </head>
+
+
 <body>
 
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <a href="#home" class="brand-logo">
-        <img src="logo.png" alt="Nrithya Collections Logo" class="logo-img" />
-        <span class="brand-name">Nrithya Collections</span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
-      <nav class="nav-links" id="navLinks">
-        <a href="#home" class="nav-item active" data-target="home">Home</a>
-        <a href="#catalog" class="nav-item" data-target="catalog">Explore Catalog</a>
-        <a href="#custom-fit" class="nav-item" data-target="custom-fit">Custom Fitting</a>
-        <a href="#rentals" class="nav-item" data-target="rentals">Rentals</a>
-        <a href="#bulk-orders" class="nav-item" data-target="bulk-orders">Bulk Packs</a>
-        <a href="#contact" class="btn-nav">Contact & Location</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section id="home" class="section-view active">
-      <div class="hero">
-        <div class="container hero-content">
-          <img src="logo.png" alt="Nrithya Collections Logo" class="hero-logo" />
-          <span class="badge">Palakkad, Kerala</span>
-          <h1>Nrithya Collections</h1>
-          <p>Handcrafted traditional attire, temple jewellery, hair accessories, and premium Chilanka (Ghungroo) for dancers, academies, and Arangetram performances.</p>
-          <div class="hero-actions">
-            <button class="btn btn-primary nav-trigger" data-target="catalog">Explore Full Catalog</button>
-            <button class="btn btn-secondary nav-trigger" data-target="custom-fit">Custom Tailoring</button>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- ================= HEADER ================= -->
 
-    <!-- EXPLORE CATALOG SECTION -->
-    <section id="catalog" class="section-view container">
-      <h2 class="section-title">Explore Costumes & Accessories</h2>
-      <p class="section-subtitle">Browse through our complete collection of handcrafted attire and traditional ornaments.</p>
+<header>
 
-      <!-- Category Filter Tabs -->
-      <div class="filter-tabs">
-        <button class="filter-btn active" data-filter="all">All Items</button>
-        <button class="filter-btn" data-filter="costumes">Costumes</button>
-        <button class="filter-btn" data-filter="jewellery">Temple Jewellery</button>
-        <button class="filter-btn" data-filter="accessories">Hair & Accessories</button>
-        <button class="filter-btn" data-filter="chilanka">Chilanka (Ghungroo)</button>
-      </div>
+<div class="container header-container">
 
-      <!-- Catalog Grid -->
-      <div class="grid grid-3" id="catalogGrid">
-        <!-- Bharatanatyam -->
-        <div class="card catalog-item" data-category="costumes">
-          <span class="card-badge">Tailoring & Rental</span>
-          <h3>Bharatanatyam Costume</h3>
-          <p>Silk/Kanchipuram pleated sets with front fan, blouse, and pyjama/skirt.</p>
-          <button class="btn btn-secondary btn-sm inquire-item" data-item="Bharatanatyam Costume">Inquire Price</button>
-        </div>
+<a href="#home">
 
-        <!-- Mohiniyattam -->
-        <div class="card catalog-item" data-category="costumes">
-          <span class="card-badge">Tailoring & Rental</span>
-          <h3>Mohiniyattam Set</h3>
-          <p>Off-White Kasavu attire featuring golden brocade borders and traditional drapes.</p>
-          <button class="btn btn-secondary btn-sm inquire-item" data-item="Mohiniyattam Costume">Inquire Price</button>
-        </div>
+<img
+    src="logo.png"
+    alt="Nrithya Collections Logo"
+    class="logo">
 
-        <!-- Kuchipudi -->
-        <div class="card catalog-item" data-category="costumes">
-          <span class="card-badge">Tailoring & Rental</span>
-          <h3>Kuchipudi Silk Costume</h3>
-          <p>Vibrant silk sets designed with elaborate fan pleats for fluid dance movement.</p>
-          <button class="btn btn-secondary btn-sm inquire-item" data-item="Kuchipudi Costume">Inquire Price</button>
-        </div>
+</a>
 
-        <!-- Kathakali -->
-        <div class="card catalog-item" data-category="costumes">
-          <span class="card-badge">Rental Only</span>
-          <h3>Kathakali Aharya</h3>
-          <p>Authentic heavy stage sets including layered skirts (Uduppu) and jackets.</p>
-          <button class="btn btn-secondary btn-sm inquire-item" data-item="Kathakali Aharya">Inquire Rental</button>
-        </div>
 
-        <!-- Ottamthullal -->
-        <div class="card catalog-item" data-category="costumes">
-          <span class="card-badge">Rental Only</span>
-          <h3>Ottamthullal Costume</h3>
-          <p>Multi-colored pleated skirts, waist belts, and traditional chest bands.</p>
-          <button class="btn btn-secondary btn-sm inquire-item" data-item="Ottamthullal Costume">Inquire Rental</button>
-        </div>
+<nav>
 
-        <!-- Temple Jewellery -->
-        <div class="card catalog-item" data-category="jewellery">
-          <span class="card-badge">Purchase / Rent</span>
-          <h3>Full Temple Jewellery Set</h3>
-          <p>Includes Nethichutti, Mattal, Jimikki, long & short necklaces, and Oddiyanam.</p>
-          <button class="btn btn-secondary btn-sm inquire-item" data-item="Temple Jewellery Set">Inquire Set</button>
-        </div>
+<a href="#home">Home</a>
 
-        <!-- Hair Accessories -->
-        <div class="card catalog-item" data-category="accessories">
-          <span class="card-badge">In Stock</span>
-          <h3>Hair Accessories Pack</h3>
-          <p>Rakodi, Jada Billa braid sets, floral Gajra (Kuncham), and extensions.</p>
-          <button class="btn btn-secondary btn-sm inquire-item" data-item="Hair Accessories Pack">Inquire Accessories</button>
-        </div>
+<a href="#costumes">Costumes</a>
 
-        <!-- Chilanka -->
-        <div class="card catalog-item" data-category="chilanka">
-          <span class="card-badge">In Stock</span>
-          <h3>Brass Chilanka (Ghungroo)</h3>
-          <p>Tuned heavy brass bells mounted on genuine leather or soft velvet pads.</p>
-          <button class="btn btn-secondary btn-sm inquire-item" data-item="Chilanka / Ghungroo">Inquire Ghungroo</button>
-        </div>
-      </div>
-    </section>
+<a href="#accessories">Accessories</a>
 
-    <!-- CUSTOM FITTING SECTION -->
-    <section id="custom-fit" class="section-view container">
-      <h2 class="section-title">Custom Tailoring Services</h2>
-      <p class="section-subtitle">Get custom-stitched costumes for Bharatanatyam, Mohiniyattam, and Kuchipudi based on your precise measurements.</p>
-      
-      <div class="form-container">
-        <form id="customFittingForm" class="interactive-form">
-          <h3>Custom Measurement Builder</h3>
-          
-          <div class="form-group">
-            <label for="fitDanceForm">Select Dance Form:</label>
-            <select id="fitDanceForm" required>
-              <option value="Bharatanatyam">Bharatanatyam</option>
-              <option value="Mohiniyattam">Mohiniyattam</option>
-              <option value="Kuchipudi">Kuchipudi</option>
-            </select>
-          </div>
+<a href="#services">Services</a>
 
-          <div class="grid grid-2">
-            <div class="form-group">
-              <label for="chestSize">Bust / Chest (Inches):</label>
-              <input type="number" id="chestSize" placeholder="e.g. 34" min="20" max="50" required />
-            </div>
-            <div class="form-group">
-              <label for="waistSize">Waist (Inches):</label>
-              <input type="number" id="waistSize" placeholder="e.g. 28" min="18" max="48" required />
-            </div>
-            <div class="form-group">
-              <label for="hipSize">Hip Size (Inches):</label>
-              <input type="number" id="hipSize" placeholder="e.g. 36" min="20" max="52" required />
-            </div>
-            <div class="form-group">
-              <label for="lengthSize">Full Length (Inches):</label>
-              <input type="number" id="lengthSize" placeholder="e.g. 40" min="25" max="60" required />
-            </div>
-          </div>
+<a href="#offers">Offers</a>
 
-          <div class="form-group">
-            <label for="fabricPreference">Fabric Preference:</label>
-            <select id="fabricPreference">
-              <option value="Standard Silk Blend">Standard Silk Blend</option>
-              <option value="Pure Kanchipuram Silk">Pure Kanchipuram Silk</option>
-              <option value="Off-White Golden Kasavu">Off-White Golden Kasavu</option>
-            </select>
-          </div>
+<a href="#contact">Contact</a>
 
-          <button type="submit" class="btn btn-primary btn-block">Send Custom Order to WhatsApp</button>
-        </form>
-      </div>
-    </section>
+</nav>
 
-    <!-- RENTALS SECTION -->
-    <section id="rentals" class="section-view container">
-      <h2 class="section-title">Costume & Accessories Rental Portal</h2>
-      <p class="section-subtitle">Hassle-free rentals for competitions, school events, and stage shows.</p>
+</div>
 
-      <div class="form-container">
-        <form id="rentalBookingForm" class="interactive-form">
-          <h3>Check Rental Availability</h3>
-          <div class="form-group">
-            <label for="rentalItem">Select Item to Rent:</label>
-            <select id="rentalItem" required>
-              <option value="Bharatanatyam Costume Set">Bharatanatyam Costume Set</option>
-              <option value="Mohiniyattam Kasavu Set">Mohiniyattam Kasavu Set</option>
-              <option value="Kuchipudi Costume Set">Kuchipudi Costume Set</option>
-              <option value="Kathakali Stage Aharya">Kathakali Stage Aharya</option>
-              <option value="Ottamthullal Complete Set">Ottamthullal Complete Set</option>
-              <option value="Full Temple Jewellery Set">Full Temple Jewellery Set</option>
-            </select>
-          </div>
+</header>
 
-          <div class="grid grid-2">
-            <div class="form-group">
-              <label for="startDate">Rental Start Date:</label>
-              <input type="date" id="startDate" required />
-            </div>
-            <div class="form-group">
-              <label for="duration">Rental Duration (Days):</label>
-              <input type="number" id="duration" min="1" max="30" value="1" required />
-            </div>
-          </div>
 
-          <button type="submit" class="btn btn-secondary btn-block">Submit Rental Request</button>
-        </form>
-      </div>
-    </section>
 
-    <!-- BULK ORDERS SECTION -->
-    <section id="bulk-orders" class="section-view container">
-      <h2 class="section-title">Single Complete Packs & Academy Bulk Orders</h2>
-      <p class="section-subtitle">Discounts applied for single complete dance packs and large academy orders.</p>
+<!-- ================= MAIN ================= -->
 
-      <div class="pack-banner">
-        <div class="pack-content">
-          <span class="discount-badge">Special Tier Discounts</span>
-          <h3>All-In-One Complete Dance Pack</h3>
-          <p>Get 1 complete set including Costume, Temple Jewellery Set, Hair Accessories, and Chilanka at a discounted bundle price.</p>
-          <ul class="pack-features">
-            <li>✔ Complete set curated for your specified classical dance form</li>
-            <li>✔ Bulk order pricing available for Dance Schools & Arangetram troupes</li>
-            <li>✔ Delivery available across Kerala & India</li>
-          </ul>
-          <button class="btn btn-primary nav-trigger" data-target="contact">Inquire for Academy Discounts</button>
-        </div>
-      </div>
-    </section>
+<main>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section-view container">
-      <h2 class="section-title">Contact & Location</h2>
-      <p class="section-subtitle">Reach out directly via WhatsApp or Email for quotes, orders, and inquiries.</p>
 
-      <div class="grid grid-2">
-        <div class="contact-info">
-          <div class="info-item">
-            <strong>Address:</strong>
-            <p>Nrithya Collections, Palakkad, Kerala - 679552</p>
-          </div>
-          <div class="info-item">
-            <strong>WhatsApp Contact:</strong>
-            <p><a href="https://wa.me/xxxxxxxxxx" target="_blank" rel="noopener">Chat on WhatsApp (xxxxxxxxxx)</a></p>
-          </div>
-          <div class="info-item">
-            <strong>Email:</strong>
-            <p><a href="mailto:nrithyacollections@gmail.com">nrithyacollections@gmail.com</a></p>
-          </div>
-        </div>
+<!-- ================= HERO ================= -->
 
-        <form class="contact-form" id="generalInquiryForm">
-          <h3>General Inquiry</h3>
-          <div class="form-group">
-            <input type="text" id="genName" placeholder="Your Name" required />
-          </div>
-          <div class="form-group">
-            <textarea id="genMessage" rows="4" placeholder="How can we help you?" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Send via WhatsApp</button>
-        </form>
-      </div>
-    </section>
-  </main>
+<section class="hero" id="home">
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Nrithya Collections, Palakkad, Kerala. All rights reserved.</p>
-    </div>
-  </footer>
+<div class="hero-content">
 
-  <script src="script.js"></script>
+<p class="eyebrow">
+Tradition • Elegance • Performance
+</p>
+
+<h1>
+Celebrate Every Dance
+<br>
+<span>With the Perfect Look</span>
+</h1>
+
+<p class="hero-description">
+
+Nrithya Collections is a complete dance costume
+and accessories hub bringing together traditional
+classical dance costumes, jewellery, ghungroo
+and performance essentials in one place.
+
+</p>
+
+<a href="#costumes" class="button">
+Explore
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="eyebrow">
+Welcome to Nrithya Collections
+</p>
+
+<h2>
+Where Tradition Meets Elegance
+</h2>
+
+<p>
+Discover carefully selected dance costumes,
+traditional jewellery and accessories designed
+to complete your classical dance appearance.
+</p>
+
+</div>
+
+
+<div class="intro-grid">
+
+
+<div class="intro-card">
+
+<div class="icon">
+✦
+</div>
+
+<h3>
+Traditional Collection
+</h3>
+
+<p>
+Classical dance costumes and accessories
+inspired by India's rich performing arts traditions.
+</p>
+
+</div>
+
+
+
+<div class="intro-card">
+
+<div class="icon">
+❖
+</div>
+
+<h3>
+Complete Dance Packages
+</h3>
+
+<p>
+Convenient combinations of costumes and
+essential accessories for different dance forms.
+</p>
+
+</div>
+
+
+
+<div class="intro-card">
+
+<div class="icon">
+◈
+</div>
+
+<h3>
+One-Stop Dance Hub
+</h3>
+
+<p>
+Costumes, jewellery, ghungroo and other
+dance essentials brought together in one place.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= DANCE COSTUMES ================= -->
+
+<section class="section pale" id="costumes">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="eyebrow">
+Dance Costumes
+</p>
+
+<h2>
+Classical Dance Costume Collection
+</h2>
+
+<p>
+Explore traditional costume collections available
+for different classical dance performances.
+</p>
+
+</div>
+
+
+<div class="dance-grid">
+
+
+<div class="dance-card">
+
+<div class="dance-content">
+
+<span class="dance-number">
+01
+</span>
+
+<h3>
+Bharatanatyam
+</h3>
+
+</div>
+
+</div>
+
+
+
+<div class="dance-card">
+
+<div class="dance-content">
+
+<span class="dance-number">
+02
+</span>
+
+<h3>
+Mohiniyattam
+</h3>
+
+</div>
+
+</div>
+
+
+
+<div class="dance-card">
+
+<div class="dance-content">
+
+<span class="dance-number">
+03
+</span>
+
+<h3>
+Kuchipudi
+</h3>
+
+</div>
+
+</div>
+
+
+
+<div class="dance-card">
+
+<div class="dance-content">
+
+<span class="dance-number">
+04
+</span>
+
+<h3>
+Kathakali
+</h3>
+
+</div>
+
+</div>
+
+
+
+<div class="dance-card">
+
+<div class="dance-content">
+
+<span class="dance-number">
+05
+</span>
+
+<h3>
+Ottamthullal
+</h3>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= ACCESSORIES ================= -->
+
+<section class="section" id="accessories">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="eyebrow">
+Dance Accessories
+</p>
+
+<h2>
+Complete Your Dance Look
+</h2>
+
+<p>
+Traditional accessories and performance essentials
+to complement your dance costume.
+</p>
+
+</div>
+
+
+<div class="accessory-grid">
+
+
+<!-- TEMPLE JEWELLERY -->
+
+<div class="accessory-card">
+
+<span class="accessory-tag">
+Jewellery
+</span>
+
+<h3>
+Temple Jewellery Collection
+</h3>
+
+<p>
+Traditional temple-style jewellery designed
+to complement classical dance costumes.
+</p>
+
+<ul class="accessory-list">
+
+<li>Necklaces and harams</li>
+
+<li>Temple-style earrings</li>
+
+<li>Head and forehead ornaments</li>
+
+<li>Traditional bangles and armlets</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- GHUNGROO -->
+
+<div class="accessory-card">
+
+<span class="accessory-tag">
+Dance Essential
+</span>
+
+<h3>
+Ghungroo
+</h3>
+
+<p>
+Traditional dance bells suitable for dance
+practice, training and stage performances.
+</p>
+
+<ul class="accessory-list">
+
+<li>Traditional dance bells</li>
+
+<li>Different sizes and styles</li>
+
+<li>Suitable for classical dance practice</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- KATHAKALI -->
+
+<div class="accessory-card">
+
+<span class="accessory-tag">
+Complete Set
+</span>
+
+<h3>
+Kathakali Accessories Set
+</h3>
+
+<p>
+A coordinated collection of traditional
+accessories required to complete the Kathakali look.
+</p>
+
+<ul class="accessory-list">
+
+<li>Head accessories</li>
+
+<li>Face and forehead accessories</li>
+
+<li>Neck and chest ornaments</li>
+
+<li>Arm and wrist accessories</li>
+
+<li>Traditional costume adornments</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- OTTAMTHULLAL -->
+
+<div class="accessory-card">
+
+<span class="accessory-tag">
+Complete Set
+</span>
+
+<h3>
+Ottamthullal Accessories Set
+</h3>
+
+<p>
+A coordinated traditional accessory collection
+for completing an Ottamthullal performance appearance.
+</p>
+
+<ul class="accessory-list">
+
+<li>Traditional head accessories</li>
+
+<li>Neck ornaments</li>
+
+<li>Waist accessories</li>
+
+<li>Traditional performance adornments</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section pale" id="services">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="eyebrow">
+Our Services
+</p>
+
+<h2>
+Services for Every Dance Occasion
+</h2>
+
+<p>
+Flexible options for individual performers,
+special occasions, institutions and dance academies.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+
+<div class="service-icon">
+♢
+</div>
+
+<h3>
+Rentals
+</h3>
+
+<p>
+Costumes and selected accessories are available
+for rental for performances and special occasions.
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+✦
+</div>
+
+<h3>
+Arangetram
+</h3>
+
+<p>
+Dance costume and accessory collections
+for your important Arangetram performance.
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+❖
+</div>
+
+<h3>
+Bulk Orders
+</h3>
+
+<p>
+Bulk costume and accessory orders for
+institutions, dance academies and performance groups.
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-icon">
+✥
+</div>
+
+<h3>
+Customisation
+</h3>
+
+<p>
+Customisation options are available for
+Bharatanatyam, Mohiniyattam and Kuchipudi costumes.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= OFFERS ================= -->
+
+<section class="offers" id="offers">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="eyebrow">
+Special Offers
+</p>
+
+<h2>
+Exclusive Dance Collection Offers
+</h2>
+
+<p>
+Enjoy attractive discounts when you choose
+complete packs, combinations or bulk orders.
+</p>
+
+</div>
+
+
+<div class="offer-grid">
+
+
+<div class="offer-card">
+
+<h3>
+Complete Pack Discount
+</h3>
+
+<p>
+Special discounts are available on selected
+single complete dance costume and accessory packs.
+</p>
+
+</div>
+
+
+
+<div class="offer-card">
+
+<h3>
+Bulk Order Offers
+</h3>
+
+<p>
+Institutions, academies and dance groups
+can receive attractive offers on bulk orders.
+</p>
+
+</div>
+
+
+
+<div class="offer-card">
+
+<h3>
+Combo Savings
+</h3>
+
+<p>
+Save more by selecting suitable costume
+and accessory combinations together.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<div class="container">
+
+<p class="eyebrow">
+Ready for Your Next Performance?
+</p>
+
+<h2>
+Find Your Perfect Dance Collection
+</h2>
+
+<p>
+Explore traditional costumes, jewellery and accessories
+and create the perfect look for your next performance.
+</p>
+
+<a href="#contact" class="button">
+Contact Us
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+<div class="container footer-container">
+
+
+<div>
+
+<img
+    src="logo.png"
+    alt="Nrithya Collections Logo"
+    class="footer-logo">
+
+<p class="footer-description">
+
+Complete Dance Costume and Accessories Hub
+for classical dance performers, institutions
+and dance academies.
+
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+Contact Us
+</h3>
+
+<p>
+<strong>
+Nrithya Collections
+</strong>
+</p>
+
+<p>
+Palakkad, Kerala - 679552
+</p>
+
+<p>
+WhatsApp : XXXXXXXXXX
+</p>
+
+<p>
+Mail : nrithyacollections@gmail.com
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Nrithya Collections.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
 </body>
-</html>ustom-fitted costumes crafted according to your precise body measurements and style preferences.</p>
-          <p class="tag-list"><strong>Supported Forms:</strong> Bharatanatyam | Mohiniyattam | Kuchipudi</p>
-          <a href="#contact" class="btn btn-secondary">Request Custom Fitting</a>
-        </div>
+</html>```html
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- Rental Service -->
-        <div class="card highlight-card">
-          <h3>Rental Solutions</h3>
-          <p>Clean, well-maintained, high-quality costume and jewellery sets available on rental for stage shows, school events, and competitions.</p>
-          <p class="tag-list"><strong>Supported Forms:</strong> All Dance Forms & Accessories</p>
-          <a href="#contact" class="btn btn-secondary">Check Rental Availability</a>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      </div>
+    <meta name="description"
+        content="Nrithya Collections - Complete Dance Costume and Accessories Hub in Palakkad, Kerala.">
+
+    <title>Nrithya Collections | Dance Costumes & Accessories</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="container header-container">
+
+        <a href="#home" class="logo-link">
+            <img src="logo.png"
+                 alt="Nrithya Collections Logo"
+                 class="logo">
+        </a>
+
+        <button class="menu-button" id="menuButton" aria-label="Open Menu">
+            ☰
+        </button>
+
+        <nav id="mainNav">
+
+            <a href="#home">Home</a>
+
+            <a href="#costumes">Costumes</a>
+
+            <a href="#accessories">Accessories</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#offers">Offers</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            Tradition • Elegance • Performance
+        </p>
+
+        <h1>
+            Celebrate Every Dance
+            <br>
+            <span>With the Perfect Look</span>
+        </h1>
+
+        <p class="hero-description">
+
+            Nrithya Collections is a complete dance costume
+            and accessories hub bringing together traditional
+            classical dance costumes, jewellery, ghungroo
+            and performance essentials in one place.
+
+        </p>
+
+        <a href="#costumes" class="button">
+            Explore
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section">
+
     <div class="container">
-      <h2 class="section-title">Contact & Inquiries</h2>
-      <p class="section-subtitle">Reach out to us directly for price quotes, custom sizes, rental bookings, and bulk orders.</p>
 
-      <div class="grid grid-2">
-        <div class="contact-info">
-          <div class="info-item">
-            <strong>Address:</strong>
-            <p>Nrithya Collections, Palakkad, Kerala - 679552</p>
-          </div>
-          <div class="info-item">
-            <strong>WhatsApp Contact:</strong>
-            <p><a href="https://wa.me/xxxxxxxxxx" target="_blank" rel="noopener">Chat on WhatsApp (xxxxxxxxxx)</a></p>
-          </div>
-          <div class="info-item">
-            <strong>Email:</strong>
-            <p><a href="mailto:nrithyacollections@gmail.com">nrithyacollections@gmail.com</a></p>
-          </div>
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                Welcome to Nrithya Collections
+            </p>
+
+            <h2>
+                Where Tradition Meets Elegance
+            </h2>
+
+            <p>
+                Discover carefully selected dance costumes,
+                traditional jewellery and accessories designed
+                to complete your classical dance appearance.
+            </p>
+
         </div>
 
-        <!-- Quick Inquiry Form -->
-        <form class="contact-form" id="inquiryForm">
-          <h3>Send an Inquiry</h3>
-          <div class="form-group">
-            <input type="text" id="name" placeholder="Your Name" required />
-          </div>
-          <div class="form-group">
-            <select id="danceForm" required>
-              <option value="" disabled selected>Select Dance Form / Item</option>
-              <option value="Bharatanatyam">Bharatanatyam</option>
-              <option value="Mohiniyattam">Mohiniyattam</option>
-              <option value="Kuchipudi">Kuchipudi</option>
-              <option value="Kathakali">Kathakali</option>
-              <option value="Ottamthullal">Ottamthullal</option>
-              <option value="Jewellery & Accessories">Jewellery & Accessories</option>
-              <option value="Chilanka / Ghungroo">Chilanka (Ghungroo)</option>
-              <option value="Complete Pack">Single Complete Pack</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <select id="serviceType" required>
-              <option value="" disabled selected>Select Service Required</option>
-              <option value="Purchase">Purchase Costume/Accessories</option>
-              <option value="Customisation">Custom Fitting (Bharatanatyam/Mohiniyattam/Kuchipudi)</option>
-              <option value="Rental">Rental Request</option>
-              <option value="Bulk Order">Bulk Order (Academy / Arangetram)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <textarea id="message" rows="4" placeholder="Your requirements, event date, or custom size details..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Send Inquiry via WhatsApp</button>
-        </form>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+        <div class="intro-grid">
+
+            <div class="intro-card">
+
+                <div class="icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Traditional Collection
+                </h3>
+
+                <p>
+                    Classical dance costumes and accessories
+                    inspired by India's rich performing arts traditions.
+                </p>
+
+            </div>
+
+
+            <div class="intro-card">
+
+                <div class="icon">
+                    ❖
+                </div>
+
+                <h3>
+                    Complete Dance Packages
+                </h3>
+
+                <p>
+                    Convenient combinations of costumes and
+                    essential accessories for different dance forms.
+                </p>
+
+            </div>
+
+
+            <div class="intro-card">
+
+                <div class="icon">
+                    ◈
+                </div>
+
+                <h3>
+                    One-Stop Dance Hub
+                </h3>
+
+                <p>
+                    Costumes, jewellery, ghungroo and other
+                    dance essentials brought together in one place.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= DANCE COSTUMES ================= -->
+
+<section class="section pale" id="costumes">
+
     <div class="container">
-      <p>&copy; <span id="year"></span> Nrithya Collections, Palakkad, Kerala. All rights reserved.</p>
-    </div>
-  </footer>
 
-  <!-- Script -->
-  <script src="script.js"></script>
-</body>
-</html>>Get custom-fitted costumes crafted according to your precise body measurements and style preferences.</p>
-          <p class="tag-list"><strong>Supported Forms:</strong> Bharatanatyam | Mohiniyattam | Kuchipudi</p>
-          <a href="#contact" class="btn btn-secondary">Request Custom Fitting</a>
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                Dance Costumes
+            </p>
+
+            <h2>
+                Classical Dance Costume Collection
+            </h2>
+
+            <p>
+                Explore traditional costume collections available
+                for different classical dance performances.
+            </p>
+
         </div>
 
-        <!-- Rental Service -->
-        <div class="card highlight-card">
-          <h3>Rental Solutions</h3>
-          <p>Clean, well-maintained, high-quality costume and jewellery sets available on rental for stage shows, school events, and competitions.</p>
-          <p class="tag-list"><strong>Supported Forms:</strong> All Dance Forms & Accessories</p>
-          <a href="#contact" class="btn btn-secondary">Check Rental Availability</a>
+
+        <div class="dance-grid">
+
+
+            <div class="dance-card">
+
+                <div class="dance-content">
+
+                    <span class="dance-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Bharatanatyam
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="dance-card">
+
+                <div class="dance-content">
+
+                    <span class="dance-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Mohiniyattam
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="dance-card">
+
+                <div class="dance-content">
+
+                    <span class="dance-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Kuchipudi
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="dance-card">
+
+                <div class="dance-content">
+
+                    <span class="dance-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Kathakali
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="dance-card">
+
+                <div class="dance-content">
+
+                    <span class="dance-number">
+                        05
+                    </span>
+
+                    <h3>
+                        Ottamthullal
+                    </h3>
+
+                </div>
+
+            </div>
+
+
         </div>
 
-      </div>
     </div>
-  </section>
+
+</section>
 
 
 
-  <!-- Script -->
-  <script src="script.js"></script>
+<!-- ================= ACCESSORIES ================= -->
+
+<section class="section" id="accessories">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                Dance Accessories
+            </p>
+
+            <h2>
+                Complete Your Dance Look
+            </h2>
+
+            <p>
+                Traditional accessories and performance essentials
+                to complement your dance costume.
+            </p>
+
+        </div>
+
+
+        <div class="accessory-grid">
+
+
+            <!-- TEMPLE JEWELLERY -->
+
+            <div class="accessory-card">
+
+                <span class="accessory-tag">
+                    Jewellery
+                </span>
+
+                <h3>
+                    Temple Jewellery Collection
+                </h3>
+
+                <p>
+                    Traditional temple-style jewellery designed
+                    to complement classical dance costumes.
+                </p>
+
+                <ul class="accessory-list">
+
+                    <li>
+                        Necklaces and harams
+                    </li>
+
+                    <li>
+                        Temple-style earrings
+                    </li>
+
+                    <li>
+                        Head and forehead ornaments
+                    </li>
+
+                    <li>
+                        Traditional bangles and armlets
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- GHUNGROO -->
+
+            <div class="accessory-card">
+
+                <span class="accessory-tag">
+                    Dance Essential
+                </span>
+
+                <h3>
+                    Ghungroo
+                </h3>
+
+                <p>
+                    Traditional dance bells suitable for dance
+                    practice, training and stage performances.
+                </p>
+
+                <ul class="accessory-list">
+
+                    <li>
+                        Traditional dance bells
+                    </li>
+
+                    <li>
+                        Different sizes and styles
+                    </li>
+
+                    <li>
+                        Suitable for classical dance practice
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- KATHAKALI -->
+
+            <div class="accessory-card">
+
+                <span class="accessory-tag">
+                    Complete Set
+                </span>
+
+                <h3>
+                    Kathakali Accessories Set
+                </h3>
+
+                <p>
+                    A coordinated collection of traditional
+                    accessories required to complete the Kathakali look.
+                </p>
+
+                <ul class="accessory-list">
+
+                    <li>
+                        Head accessories
+                    </li>
+
+                    <li>
+                        Face and forehead accessories
+                    </li>
+
+                    <li>
+                        Neck and chest ornaments
+                    </li>
+
+                    <li>
+                        Arm and wrist accessories
+                    </li>
+
+                    <li>
+                        Traditional costume adornments
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- OTTAMTHULLAL -->
+
+            <div class="accessory-card">
+
+                <span class="accessory-tag">
+                    Complete Set
+                </span>
+
+                <h3>
+                    Ottamthullal Accessories Set
+                </h3>
+
+                <p>
+                    A coordinated traditional accessory collection
+                    for completing an Ottamthullal performance appearance.
+                </p>
+
+                <ul class="accessory-list">
+
+                    <li>
+                        Traditional head accessories
+                    </li>
+
+                    <li>
+                        Neck ornaments
+                    </li>
+
+                    <li>
+                        Waist accessories
+                    </li>
+
+                    <li>
+                        Traditional performance adornments
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section pale" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                Our Services
+            </p>
+
+            <h2>
+                Services for Every Dance Occasion
+            </h2>
+
+            <p>
+                Flexible options for individual performers,
+                special occasions, institutions and dance academies.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ♢
+                </div>
+
+                <h3>
+                    Rentals
+                </h3>
+
+                <p>
+                    Costumes and selected accessories are available
+                    for rental for performances and special occasions.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Arangetram
+                </h3>
+
+                <p>
+                    Dance costume and accessory collections
+                    for your important Arangetram performance.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ❖
+                </div>
+
+                <h3>
+                    Bulk Orders
+                </h3>
+
+                <p>
+                    Bulk costume and accessory orders for
+                    institutions, dance academies and performance groups.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ✥
+                </div>
+
+                <h3>
+                    Customisation
+                </h3>
+
+                <p>
+                    Customisation options are available for
+                    Bharatanatyam, Mohiniyattam and Kuchipudi costumes.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= OFFERS ================= -->
+
+<section class="offers" id="offers">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                Special Offers
+            </p>
+
+            <h2>
+                Exclusive Dance Collection Offers
+            </h2>
+
+            <p>
+                Enjoy attractive discounts when you choose
+                complete packs, combinations or bulk orders.
+            </p>
+
+        </div>
+
+
+        <div class="offer-grid">
+
+
+            <div class="offer-card">
+
+                <h3>
+                    Complete Pack Discount
+                </h3>
+
+                <p>
+                    Special discounts are available on selected
+                    single complete dance costume and accessory packs.
+                </p>
+
+            </div>
+
+
+
+            <div class="offer-card">
+
+                <h3>
+                    Bulk Order Offers
+                </h3>
+
+                <p>
+                    Institutions, academies and dance groups
+                    can receive attractive offers on bulk orders.
+                </p>
+
+            </div>
+
+
+
+            <div class="offer-card">
+
+                <h3>
+                    Combo Savings
+                </h3>
+
+                <p>
+                    Save more by selecting suitable costume
+                    and accessory combinations together.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            Ready for Your Next Performance?
+        </p>
+
+        <h2>
+            Find Your Perfect Dance Collection
+        </h2>
+
+        <p>
+            Explore traditional costumes, jewellery and accessories
+            and create the perfect look for your next performance.
+        </p>
+
+        <a href="#contact" class="button">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="container footer-container">
+
+
+        <div>
+
+            <img
+                src="logo.png"
+                alt="Nrithya Collections Logo"
+                class="footer-logo">
+
+            <p class="footer-description">
+
+                Complete Dance Costume and Accessories Hub
+                for classical dance performers, institutions
+                and dance academies.
+
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <p>
+                <strong>
+                    Nrithya Collections
+                </strong>
+            </p>
+
+            <p>
+                Palakkad, Kerala - 679552
+            </p>
+
+            <p>
+                WhatsApp : XXXXXXXXXX
+            </p>
+
+            <p>
+                Mail : nrithyacollections@gmail.com
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Nrithya Collections.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
-                  <div class="feature-number">01</div>
-                        <h3>Combo Offers</h3>
-                        <p>Convenient costume and matching jewelry combinations offered at attractive discounted bundle prices.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-number">02</div>
-                        <h3>Full Dance Packages</h3>
-                        <p>Complete curated packages designed explicitly for individual classical dance arangetrams and recitals.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-number">03</div>
-                        <h3>Rent Costumes</h3>
-                        <p>High-end performance costumes and selected temple accessories available easily for short-term rental.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-number">04</div>
-                        <h3>One-Stop Collection</h3>
-                        <p>Save time with full sets—costumes, jewelry, hair pieces, and ghungroo available under one roof.</p>
+```hair pieces, and ghungroo available under one roof.</p>
                     </div>
 
                 </div>
