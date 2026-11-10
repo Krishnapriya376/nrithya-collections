@@ -1,100 +1,86 @@
 ```javascript
-/* ================= MOBILE MENU ================= */
+/* ================= PAGE LOADED ================= */
 
-const menuButton = document.getElementById("menuButton");
-const mainNav = document.getElementById("mainNav");
+document.addEventListener("DOMContentLoaded", function () {
 
-menuButton.addEventListener("click", function () {
-
-    mainNav.classList.toggle("active");
-
-    if (mainNav.classList.contains("active")) {
-        menuButton.innerHTML = "✕";
-        menuButton.setAttribute("aria-label", "Close Menu");
-    } else {
-        menuButton.innerHTML = "☰";
-        menuButton.setAttribute("aria-label", "Open Menu");
-    }
+    console.log("Nrithya Collections website loaded.");
 
 });
 
 
-/* ================= CLOSE MOBILE MENU ================= */
+/* ================= EXPLORE BUTTON ================= */
 
-const navLinks = document.querySelectorAll("#mainNav a");
+const exploreButton =
+    document.querySelector(".explore-button");
 
-navLinks.forEach(function (link) {
+if (exploreButton) {
 
-    link.addEventListener("click", function () {
+    exploreButton.addEventListener("click", function () {
 
-        mainNav.classList.remove("active");
+        const costumeSection =
+            document.getElementById("costumes");
 
-        menuButton.innerHTML = "☰";
+        if (costumeSection) {
 
-        menuButton.setAttribute("aria-label", "Open Menu");
+            costumeSection.scrollIntoView({
+                behavior: "smooth"
+            });
 
-    });
-
-});
-
-
-/* ================= ACTIVE NAVIGATION ================= */
-
-const sections = document.querySelectorAll("section[id]");
-const navigationLinks = document.querySelectorAll("#mainNav a");
-
-window.addEventListener("scroll", function () {
-
-    let currentSection = "";
-
-    sections.forEach(function (section) {
-
-        const sectionTop = section.offsetTop - 150;
-
-        const sectionHeight = section.offsetHeight;
-
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-            currentSection = section.getAttribute("id");
         }
 
     });
 
+}
 
-    navigationLinks.forEach(function (link) {
 
-        link.classList.remove("active");
+/* ================= SCROLL ANIMATION ================= */
 
-        if (
-            link.getAttribute("href") === "#" + currentSection
-        ) {
-            link.classList.add("active");
+const animatedElements =
+    document.querySelectorAll(
+        ".costume-card, .accessory-card, .service-card, .offer-items div"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
         }
-
-    });
-
-});
+    );
 
 
-/* ================= BUTTON CLICK EFFECT ================= */
+animatedElements.forEach(function (element) {
 
-const buttons = document.querySelectorAll(".button");
-
-buttons.forEach(function (button) {
-
-    button.addEventListener("click", function () {
-
-        button.style.transform = "scale(0.97)";
-
-        setTimeout(function () {
-
-            button.style.transform = "";
-
-        }, 150);
-
-    });
+    observer.observe(element);
 
 });
+
+
+/* ================= FOOTER YEAR ================= */
+
+const copyright =
+    document.querySelector(".copyright");
+
+if (copyright) {
+
+    const year = new Date().getFullYear();
+
+    copyright.innerHTML =
+        "© " + year +
+        " Nrithya Collections. All Rights Reserved.";
+
+}
 ```
