@@ -1,6 +1,3 @@
-```css
-/* ================= GENERAL ================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +10,8 @@ html {
 
 body {
     font-family: Georgia, "Times New Roman", serif;
-
     background: #fffaf0;
-
     color: #421319;
-
     line-height: 1.6;
 }
 
@@ -26,141 +20,91 @@ a {
 }
 
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 header {
-
     background: #fffaf0;
-
     border-bottom: 2px solid #c79a3b;
-
     padding: 18px 6%;
-
 }
 
 .header-container {
-
-    max-width: 1200px;
-
+    max-width: 1100px;
     margin: auto;
 
     display: flex;
-
     align-items: center;
+    justify-content: center;
 
-    justify-content: space-between;
-
-    gap: 30px;
-
+    gap: 40px;
 }
 
 .logo {
-
     width: 145px;
-
     height: auto;
-
     display: block;
-
 }
 
 .header-container h1 {
-
-    flex: 1;
-
-    text-align: center;
-
     color: #5a1019;
-
     font-size: clamp(28px, 4vw, 48px);
-
-    letter-spacing: 1px;
-
+    text-align: center;
 }
 
 
-/* ================= INTRO ================= */
+/* INTRO */
 
 .intro {
-
-    background:
-        linear-gradient(
-            135deg,
-            #fffaf0,
-            #f7e4ad
-        );
+    background: linear-gradient(
+        135deg,
+        #fffaf0,
+        #f7e4ad
+    );
 
     padding: 75px 6%;
-
 }
 
 .intro-container {
-
     max-width: 1100px;
-
     margin: auto;
 
     display: grid;
-
     grid-template-columns: 2fr 1fr;
 
     align-items: center;
-
     gap: 70px;
-
 }
 
 .description {
-
     max-width: 650px;
-
 }
 
 .small-heading {
-
     color: #a2761c;
-
     font-family: Arial, sans-serif;
-
     font-size: 13px;
-
     font-weight: bold;
-
     letter-spacing: 2px;
-
     margin-bottom: 18px;
-
 }
 
 .description p:not(.small-heading) {
-
     font-family: Arial, sans-serif;
-
     color: #6a5750;
-
     font-size: 16px;
+    margin-bottom: 15px;
 
-    margin-bottom: 12px;
-
+    text-align: justify;
 }
 
-
-/* ================= EXPLORE ================= */
-
 .explore-area {
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
 }
 
 .explore-button {
-
     display: inline-block;
-
     min-width: 170px;
 
     padding: 15px 35px;
@@ -168,386 +112,272 @@ header {
     text-align: center;
 
     background: #5b1119;
-
     color: #fff8e8;
 
     border: 2px solid #5b1119;
-
     border-radius: 6px;
 
     font-family: Arial, sans-serif;
-
     font-weight: bold;
 
-    letter-spacing: 1px;
-
     transition: 0.3s;
-
 }
 
 .explore-button:hover {
-
     background: #b48626;
-
     border-color: #b48626;
-
     transform: translateY(-3px);
-
 }
 
 
-/* ================= SECTIONS ================= */
+/* COMMON SECTIONS */
 
 .content-section {
-
     padding: 85px 6%;
-
 }
 
 .section-title {
-
     max-width: 750px;
-
     margin: 0 auto 50px;
 
     text-align: center;
-
 }
 
 .section-label {
-
     color: #b08324;
 
     font-family: Arial, sans-serif;
 
     font-size: 12px;
-
     font-weight: bold;
 
     letter-spacing: 3px;
-
-    text-transform: uppercase;
-
 }
 
 .section-title h2 {
-
     color: #591019;
-
     font-size: clamp(30px, 4vw, 45px);
-
     margin: 5px 0 10px;
-
 }
 
 .section-title p:last-child {
-
     color: #725f56;
-
     font-family: Arial, sans-serif;
-
 }
 
 
-/* ================= DANCE COSTUMES ================= */
+/* DANCE COSTUMES */
 
 .costume-container {
-
     max-width: 1100px;
-
     margin: auto;
 
     display: grid;
-
     grid-template-columns: repeat(5, 1fr);
 
     gap: 18px;
 
+    align-items: stretch;
 }
 
 .costume-card {
-
     min-height: 250px;
 
     padding: 25px 20px;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: flex-end;
-
-    position: relative;
-
-    overflow: hidden;
 
     border-radius: 10px;
 
     color: white;
 
-    background:
-        linear-gradient(
-            145deg,
-            #5b1119,
-            #9d711e
-        );
+    background: linear-gradient(
+        145deg,
+        #5b1119,
+        #9d711e
+    );
 
     box-shadow:
-        0 10px 25px
-        rgba(70, 25, 15, 0.15);
+        0 10px 25px rgba(70, 25, 15, 0.15);
 
     transition: 0.3s;
-
 }
 
 .costume-card:nth-child(even) {
-
-    background:
-        linear-gradient(
-            145deg,
-            #9d711e,
-            #5b1119
-        );
-
+    background: linear-gradient(
+        145deg,
+        #9d711e,
+        #5b1119
+    );
 }
 
 .costume-card:hover {
-
     transform: translateY(-7px);
-
-}
-
-.costume-card::before {
-
-    content: "✦";
-
-    position: absolute;
-
-    top: 10px;
-
-    right: 15px;
-
-    font-size: 60px;
-
-    color: rgba(255,255,255,0.12);
-
 }
 
 .costume-card span {
-
     font-family: Arial, sans-serif;
-
     font-size: 11px;
-
     letter-spacing: 2px;
-
-    opacity: 0.8;
-
 }
 
 .costume-card h3 {
-
     font-size: 21px;
-
     margin: 5px 0;
-
 }
 
 .costume-card p {
-
     font-family: Arial, sans-serif;
-
     font-size: 13px;
 
-    opacity: 0.85;
-
+    text-align: justify;
 }
 
 
-/* ================= ACCESSORIES ================= */
+/* ACCESSORIES */
 
 .accessories-section {
-
     background: #f7e9c4;
-
 }
 
 .accessory-container {
-
     max-width: 1100px;
-
     margin: auto;
 
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
 
     gap: 25px;
 
+    align-items: stretch;
 }
 
 .accessory-card {
-
     background: #fffdf8;
 
     border: 1px solid #d9bd78;
-
     border-radius: 10px;
 
     padding: 30px;
 
-    transition: 0.3s;
+    height: 100%;
 
+    transition: 0.3s;
 }
 
 .accessory-card:hover {
-
     transform: translateY(-5px);
 
     box-shadow:
-        0 10px 25px
-        rgba(70, 25, 15, 0.10);
-
+        0 10px 25px rgba(70, 25, 15, 0.10);
 }
 
 .card-number {
-
     color: #b08324;
 
     font-family: Arial, sans-serif;
 
     font-size: 12px;
-
     font-weight: bold;
 
     letter-spacing: 2px;
-
 }
 
 .accessory-card h3 {
-
     color: #591019;
-
     font-size: 23px;
-
     margin: 8px 0;
-
 }
 
 .accessory-card p {
-
     color: #705e54;
 
     font-family: Arial, sans-serif;
 
     font-size: 14px;
 
+    text-align: justify;
 }
 
 .accessory-card ul {
-
     margin-top: 15px;
-
     padding-left: 20px;
 
     color: #66544c;
 
     font-family: Arial, sans-serif;
-
     font-size: 14px;
-
 }
 
 .accessory-card li {
-
     margin: 5px 0;
-
 }
 
 
-/* ================= SERVICES ================= */
-
-.services-section {
-
-    background: #fffaf0;
-
-}
+/* SERVICES */
 
 .service-container {
-
     max-width: 1100px;
-
     margin: auto;
 
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
 
+    align-items: stretch;
 }
 
 .service-card {
-
     padding: 30px 22px;
 
     background: #fffdf8;
 
     border-top: 5px solid #9c721d;
-
     border-radius: 5px;
 
     box-shadow:
-        0 8px 20px
-        rgba(70, 25, 15, 0.08);
+        0 8px 20px rgba(70, 25, 15, 0.08);
+
+    height: 100%;
 
     transition: 0.3s;
-
 }
 
 .service-card:hover {
-
     transform: translateY(-5px);
-
 }
 
 .service-card span {
-
     color: #b08324;
 
     font-family: Arial, sans-serif;
 
     font-size: 12px;
-
     font-weight: bold;
-
 }
 
 .service-card h3 {
-
     color: #591019;
-
     font-size: 22px;
-
     margin: 8px 0;
-
 }
 
 .service-card p {
-
     color: #705e54;
 
     font-family: Arial, sans-serif;
-
     font-size: 14px;
 
+    text-align: justify;
 }
 
 
-/* ================= OFFERS ================= */
+/* OFFERS */
 
 .offers {
-
     padding: 80px 6%;
 
     background: #5a1019;
@@ -555,61 +385,49 @@ header {
     color: white;
 
     text-align: center;
-
 }
 
 .offers-container {
-
     max-width: 1100px;
-
     margin: auto;
-
 }
 
 .offers h2 {
-
     color: #f3d48b;
 
     font-size: clamp(30px, 4vw, 45px);
 
     margin: 5px 0 10px;
-
 }
 
-.offers > .offers-container > p:not(.section-label) {
-
+.offers-container > p:not(.section-label) {
     color: #eadfce;
 
     font-family: Arial, sans-serif;
-
 }
 
 .offer-items {
-
     margin-top: 40px;
 
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
 
+    align-items: stretch;
 }
 
 .offer-items div {
-
     padding: 25px;
 
     border: 1px solid #b99546;
 
-    background: rgba(255,255,255,0.06);
+    background: rgba(255, 255, 255, 0.06);
 
     border-radius: 8px;
-
 }
 
 .offer-items strong {
-
     display: block;
 
     color: #f0cf7b;
@@ -617,11 +435,9 @@ header {
     font-size: 20px;
 
     margin-bottom: 8px;
-
 }
 
 .offer-items span {
-
     display: block;
 
     color: #eadfce;
@@ -630,37 +446,32 @@ header {
 
     font-size: 13px;
 
+    text-align: justify;
 }
 
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer {
-
     background: #25090d;
-
     color: #e9dbc3;
-
 }
 
 .footer-container {
-
     max-width: 1100px;
-
     margin: auto;
 
     padding: 55px 6% 40px;
 
     display: grid;
-
     grid-template-columns: 1fr 1fr;
 
     gap: 60px;
 
+    align-items: start;
 }
 
 .footer-brand img {
-
     width: 170px;
 
     background: #fffaf0;
@@ -670,39 +481,30 @@ footer {
     padding: 4px;
 
     margin-bottom: 10px;
-
 }
 
 .footer-brand h3 {
-
     color: #e2bd68;
-
     font-size: 22px;
-
     margin-bottom: 5px;
-
 }
 
 .footer-brand p {
-
     color: #c8b6a5;
 
     font-family: Arial, sans-serif;
 
     font-size: 14px;
 
+    text-align: justify;
 }
 
 .footer-contact h3 {
-
     color: #e2bd68;
-
     margin-bottom: 15px;
-
 }
 
 .footer-contact p {
-
     color: #c8b6a5;
 
     font-family: Arial, sans-serif;
@@ -710,17 +512,13 @@ footer {
     font-size: 14px;
 
     margin: 6px 0;
-
 }
 
 .footer-contact strong {
-
     color: #f0e2ca;
-
 }
 
 .copyright {
-
     border-top: 1px solid rgba(255,255,255,0.1);
 
     padding: 17px;
@@ -732,180 +530,91 @@ footer {
     font-family: Arial, sans-serif;
 
     font-size: 12px;
-
 }
 
 
-/* ================= TABLET ================= */
+/* TABLET */
 
 @media (max-width: 1000px) {
 
     .costume-container {
-
         grid-template-columns: repeat(3, 1fr);
-
     }
 
     .service-container {
-
         grid-template-columns: repeat(2, 1fr);
-
     }
-
 }
 
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
     header {
-
         padding: 15px 5%;
-
     }
 
     .header-container {
-
         flex-direction: column;
-
-        text-align: center;
-
+        gap: 15px;
     }
 
     .logo {
-
         width: 125px;
-
     }
 
     .header-container h1 {
-
         font-size: 30px;
-
     }
 
     .intro {
-
         padding: 55px 5%;
-
     }
 
     .intro-container {
-
         grid-template-columns: 1fr;
-
         gap: 30px;
-
         text-align: center;
-
     }
 
     .description {
-
         margin: auto;
-
     }
 
-    .explore-area {
-
-        justify-content: center;
-
+    .description p:not(.small-heading) {
+        text-align: justify;
     }
 
     .content-section {
-
         padding: 65px 5%;
-
     }
 
     .costume-container,
-
     .accessory-container,
-
     .service-container,
-
     .offer-items,
-
     .footer-container {
-
         grid-template-columns: 1fr;
-
     }
 
     .costume-card {
-
         min-height: 190px;
-
     }
 
     .footer-container {
-
         gap: 35px;
-
     }
 
-}
-```x) {
-
-    .dance-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .footer-brand,
+    .footer-contact {
+        text-align: center;
     }
 
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .footer-brand p {
+        text-align: center;
     }
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 750px) {
-
-    .header-container {
-        min-height: 75px;
-    }
-
-    .logo {
-        width: 130px;
-    }
-
-    .menu-button {
-        display: block;
-
-        position: absolute;
-
-        right: 5%;
-        top: 22px;
-    }
-
-    nav {
-        display: none;
-
-        width: 100%;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 5px;
-
-        padding: 10px 0 15px;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .header-container {
-        flex-wrap: wrap;
-    }
-
-    .hero {
-        min-height: 560px;
-    }
-
-    .hero h1 {
+        } h1 {
         font-size: 43px;
     }
 
