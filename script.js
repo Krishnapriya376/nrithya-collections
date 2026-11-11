@@ -1,6 +1,3 @@
-```javascript
-/* ================= PAGE LOADED ================= */
-
 document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Nrithya Collections website loaded.");
@@ -8,14 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/* ================= EXPLORE BUTTON ================= */
+/* Explore button */
 
 const exploreButton =
     document.querySelector(".explore-button");
 
 if (exploreButton) {
 
-    exploreButton.addEventListener("click", function () {
+    exploreButton.addEventListener("click", function (event) {
+
+        event.preventDefault();
 
         const costumeSection =
             document.getElementById("costumes");
@@ -33,13 +32,12 @@ if (exploreButton) {
 }
 
 
-/* ================= SCROLL ANIMATION ================= */
+/* Scroll animation */
 
 const animatedElements =
     document.querySelectorAll(
         ".costume-card, .accessory-card, .service-card, .offer-items div"
     );
-
 
 const observer =
     new IntersectionObserver(
@@ -67,20 +65,3 @@ animatedElements.forEach(function (element) {
     observer.observe(element);
 
 });
-
-
-/* ================= FOOTER YEAR ================= */
-
-const copyright =
-    document.querySelector(".copyright");
-
-if (copyright) {
-
-    const year = new Date().getFullYear();
-
-    copyright.innerHTML =
-        "© " + year +
-        " Nrithya Collections. All Rights Reserved.";
-
-}
-```
