@@ -2,42 +2,16 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    console.log("Nrithya Collections website loaded.");
+    console.log("Nrithya Collections Home page loaded.");
 
 });
-
-
-/* ================= EXPLORE BUTTON ================= */
-
-const exploreButton =
-    document.querySelector(".explore-button");
-
-if (exploreButton) {
-
-    exploreButton.addEventListener("click", function (event) {
-
-        event.preventDefault();
-
-        const costumeSection =
-            document.getElementById("costumes");
-
-        if (costumeSection) {
-
-            costumeSection.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        }
-
-    });
-
-}
 
 
 /* ================= NAVIGATION LINKS ================= */
 
 const navLinks =
     document.querySelectorAll(".nav-container a");
+
 
 navLinks.forEach(function (link) {
 
