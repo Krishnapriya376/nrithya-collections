@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Nrithya Collections - Dance Costumes and Accessories">
+
+    <title>Shop | Nrithya Collections</title>
+
+    <link rel="stylesheet" href="shop.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= SHOP HEADER ================= -->
+
+<header class="shop-header">
+
+    <div class="header-main">
+
+
+        <!-- BRAND -->
+
+        <a href="index.html"
+            class="brand">
+
+            <img src="logo.png"
+                alt="Nrithya Collections Logo">
+
+            <div>
+
+                <h1>
+                    Nrithya Collections
+                </h1>
+
+                <span>
+                    Complete Dance Costume and Accessories Hub
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search costumes, jewellery, ghungroo..."
+            >
+
+            <button
+                id="searchButton">
+
+                🔍
+
+            </button>
+
+        </div>
+
+
+        <!-- ACCOUNT / ORDERS / CART -->
+
+        <div class="shop-actions">
+
+
+            <button
+                id="accountButton"
+                class="action-button">
+
+                <span class="action-icon">
+                    👤
+                </span>
+
+                <span>
+
+                    Account
+
+                    <small>
+                        Sign In
+                    </small>
+
+                </span>
+
+            </button>
+
+
+            <button
+                id="ordersButton"
+                class="action-button">
+
+                <span class="action-icon">
+                    📦
+                </span>
+
+                <span>
+
+                    Orders
+
+                    <small>
+                        My Orders
+                    </small>
+
+                </span>
+
+            </button>
+
+
+            <button
+                id="cartButton"
+                class="cart-button">
+
+                <span class="action-icon">
+                    🛒
+                </span>
+
+                <span>
+
+                    Cart
+
+                    <small id="cartCount">
+                        0 items
+                    </small>
+
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SHOP NAVIGATION ================= -->
+
+    <nav class="shop-nav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <span>|</span>
+
+        <a href="#categories">
+            Categories
+        </a>
+
+        <span>|</span>
+
+        <a href="#products">
+            Collections
+        </a>
+
+        <span>|</span>
+
+        <a href="#offers">
+            Offers
+        </a>
+
+        <span>|</span>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="shop-hero">
+
+    <div class="hero-content">
+
+        <p class="hero-label">
+            WELCOME TO NRITHYA COLLECTIONS
+        </p>
+
+        <h2>
+            Discover Your Dance Essentials
+        </h2>
+
+        <p>
+            Explore traditional costumes, jewellery and
+            performance accessories for your favourite
+            classical dance forms.
+        </p>
+
+        <a href="#products"
+            class="hero-button">
+
+            Shop Collection
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories"
+    id="categories">
+
+    <div class="section-heading">
+
+        <p>
+            EXPLORE
+        </p>
+
+        <h2>
+            Shop by Category
+        </h2>
+
+    </div>
+
+
+    <div class="category-container">
+
+
+        <button
+            class="category-card"
+            data-category="Costumes">
+
+            <div class="category-icon">
+                👗
+            </div>
+
+            <h3>
+                Dance Costumes
+            </h3>
+
+            <span>
+                Explore Costumes
+            </span>
+
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category="Jewellery">
+
+            <div class="category-icon">
+                💎
+            </div>
+
+            <h3>
+                Temple Jewellery
+            </h3>
+
+            <span>
+                View Jewellery
+            </span>
+
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category="Ghungroo">
+
+            <div class="category-icon">
+                🔔
+            </div>
+
+            <h3>
+                Ghungroo
+            </h3>
+
+            <span>
+                View Ghungroo
+            </span>
+
+        </button>
+
+
+        <button
+            class="category-card"
+            data-category="Accessories">
+
+            <div class="category-icon">
+                ✨
+            </div>
+
+            <h3>
+                Accessories
+            </h3>
+
+            <span>
+                Explore Accessories
+            </span>
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section"
+    id="products">
+
+
+    <div class="section-heading">
+
+        <p>
+            OUR COLLECTION
+        </p>
+
+        <h2>
+            Featured Products
+        </h2>
+
+        <span>
+            Discover traditional dance essentials
+            from Nrithya Collections.
+        </span>
+
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="filter-bar">
+
+        <button
+            class="filter-button active"
+            data-filter="All">
+
+            All
+
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="Costumes">
+
+            Costumes
+
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="Jewellery">
+
+            Jewellery
+
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="Ghungroo">
+
+            Ghungroo
+
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="Accessories">
+
+            Accessories
+
+        </button>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+
+    <div class="product-grid"
+        id="productGrid">
+
+
+        <!-- BHARATANATYAM -->
+
+        <div class="product-card"
+            data-category="Costumes">
+
+            <div class="product-image">
+
+                <span class="product-badge">
+                    Featured
+                </span>
+
+                <div class="placeholder-image">
+                    👗
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Costumes
+                </p>
+
+                <h3>
+                    Bharatanatyam Costume
+                </h3>
+
+                <p class="product-description">
+                    Traditional Bharatanatyam costume
+                    for performances and Arangetram.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹ Price
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        data-name="Bharatanatyam Costume"
+                        data-price="0">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOHINIYATTAM -->
+
+        <div class="product-card"
+            data-category="Costumes">
+
+            <div class="product-image">
+
+                <div class="placeholder-image">
+                    👗
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Costumes
+                </p>
+
+                <h3>
+                    Mohiniyattam Costume
+                </h3>
+
+                <p class="product-description">
+                    Elegant traditional costume
+                    for Mohiniyattam performances.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹ Price
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        data-name="Mohiniyattam Costume"
+                        data-price="0">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- KUCHIPUDI -->
+
+        <div class="product-card"
+            data-category="Costumes">
+
+            <div class="product-image">
+
+                <div class="placeholder-image">
+                    👘
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Costumes
+                </p>
+
+                <h3>
+                    Kuchipudi Costume
+                </h3>
+
+                <p class="product-description">
+                    Classical Kuchipudi costume
+                    collection for stage performances.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹ Price
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        data-name="Kuchipudi Costume"
+                        data-price="0">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- KATHAKALI -->
+
+        <div class="product-card"
+            data-category="Costumes">
+
+            <div class="product-image">
+
+                <div class="placeholder-image">
+                    🎭
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Costumes
+                </p>
+
+                <h3>
+                    Kathakali Costume
+                </h3>
+
+                <p class="product-description">
+                    Traditional Kathakali costume
+                    collection for performances.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹ Price
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        data-name="Kathakali Costume"
+                        data-price="0">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- OTTAMTHULLAL -->
+
+        <div class="product-card"
+            data-category="Costumes">
+
+            <div class="product-image">
+
+                <div class="placeholder-image">
+                    🪷
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Costumes
+                </p>
+
+                <h3>
+                    Ottamthullal Costume
+                </h3>
+
+                <p class="product-description">
+                    Traditional Ottamthullal costume
+                    and performance essentials.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹ Price
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        data-name="Ottamthullal Costume"
+                        data-price="0">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- JEWELLERY -->
+
+        <div class="product-card"
+            data-category="Jewellery">
+
+            <div class="product-image">
+
+                <span class="product-badge">
+                    Popular
+                </span>
+
+                <div class="placeholder-image">
+                    💎
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Jewellery
+                </p>
+
+                <h3>
+                    Temple Jewellery Set
+                </h3>
+
+                <p class="product-description">
+                    Traditional temple jewellery
+                    for classical dance performances.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹ Price
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        data-name="Temple Jewellery Set"
+                        data-price="0">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- GHUNGROO -->
+
+        <div class="product-card"
+            data-category="Ghungroo">
+
+            <div class="product-image">
+
+                <div class="placeholder-image">
+                    🔔
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Ghungroo
+                </p>
+
+                <h3>
+                    Traditional Ghungroo
+                </h3>
+
+                <p class="product-description">
+                    Traditional dance bells for
+                    practice and performances.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹ Price
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        data-name="Traditional Ghungroo"
+                        data-price="0">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- KATHAKALI ACCESSORIES -->
+
+        <div class="product-card"
+            data-category="Accessories">
+
+            <div class="product-image">
+
+                <div class="placeholder-image">
+                    ✨
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Accessories
+                </p>
+
+                <h3>
+                    Kathakali Accessories Set
+                </h3>
+
+                <p class="product-description">
+                    Traditional accessories arranged
+                    as a performance set.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹ Price
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        data-name="Kathakali Accessories Set"
+                        data-price="0">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- OTTAMTHULLAL ACCESSORIES -->
+
+        <div class="product-card"
+            data-category="Accessories">
+
+            <div class="product-image">
+
+                <div class="placeholder-image">
+                    ✨
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Accessories
+                </p>
+
+                <h3>
+                    Ottamthullal Accessories Set
+                </h3>
+
+                <p class="product-description">
+                    Traditional accessories for
+                    Ottamthullal performances.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹ Price
+                    </div>
+
+                    <button
+                        class="add-cart"
+                        data-name="Ottamthullal Accessories Set"
+                        data-price="0">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NO RESULTS -->
+
+    <div id="noResults"
+        class="no-results">
+
+        <h3>
+            No products found
+        </h3>
+
+        <p>
+            Try another search or category.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFFERS ================= -->
+
+<section class="shop-offers"
+    id="offers">
+
+    <div>
+
+        <p>
+            SPECIAL OFFERS
+        </p>
+
+        <h2>
+            Complete Your Dance Collection
+        </h2>
+
+        <span>
+            Enjoy special discounts on selected complete
+            dance packs and bulk orders.
+        </span>
+
+        <a href="#products">
+            Explore Offers
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ACCOUNT MODAL ================= -->
+
+<div class="modal"
+    id="accountModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close-button"
+            data-close="accountModal">
+
+            ×
+
+        </button>
+
+        <div class="modal-icon">
+            👤
+        </div>
+
+        <h2>
+            Welcome to Nrithya Collections
+        </h2>
+
+        <p>
+            Sign in to manage your account,
+            orders and shopping experience.
+        </p>
+
+
+        <input
+            type="email"
+            id="loginEmail"
+            placeholder="Email Address">
+
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password">
+
+
+        <button
+            class="primary-button"
+            id="signInButton">
+
+            Sign In
+
+        </button>
+
+
+        <div class="or">
+            OR
+        </div>
+
+
+        <button
+            class="secondary-button"
+            id="createAccountButton">
+
+            Create New Account
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ORDERS MODAL ================= -->
+
+<div class="modal"
+    id="ordersModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close-button"
+            data-close="ordersModal">
+
+            ×
+
+        </button>
+
+        <div class="modal-icon">
+            📦
+        </div>
+
+        <h2>
+            My Orders
+        </h2>
+
+        <div class="empty-state">
+
+            <div>
+                📋
+            </div>
+
+            <h3>
+                No Orders Yet
+            </h3>
+
+            <p>
+                Your placed orders will appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CART MODAL ================= -->
+
+<div class="modal"
+    id="cartModal">
+
+    <div class="modal-box cart-box">
+
+        <button
+            class="close-button"
+            data-close="cartModal">
+
+            ×
+
+        </button>
+
+        <div class="modal-icon">
+            🛒
+        </div>
+
+        <h2>
+            Your Cart
+        </h2>
+
+        <div id="cartItems">
+
+            <div class="empty-state">
+
+                <div>
+                    🛒
+                </div>
+
+                <h3>
+                    Your Cart is Empty
+                </h3>
+
+                <p>
+                    Add products to your cart
+                    to see them here.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-total"
+            id="cartTotal">
+
+            Total: ₹0
+
+        </div>
+
+
+        <button
+            class="primary-button"
+            id="checkoutButton">
+
+            Proceed to Checkout
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-c
