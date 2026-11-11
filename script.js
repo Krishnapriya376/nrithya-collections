@@ -14,25 +14,22 @@ const exploreButton =
 
 if (exploreButton) {
 
-    exploreButton.addEventListener(
-        "click",
-        function (event) {
+    exploreButton.addEventListener("click", function (event) {
 
-            event.preventDefault();
+        event.preventDefault();
 
-            const costumeSection =
-                document.getElementById("costumes");
+        const costumeSection =
+            document.getElementById("costumes");
 
-            if (costumeSection) {
+        if (costumeSection) {
 
-                costumeSection.scrollIntoView({
-                    behavior: "smooth"
-                });
-
-            }
+            costumeSection.scrollIntoView({
+                behavior: "smooth"
+            });
 
         }
-    );
+
+    });
 
 }
 
@@ -44,20 +41,17 @@ const navLinks =
 
 navLinks.forEach(function (link) {
 
-    link.addEventListener(
-        "click",
-        function () {
+    link.addEventListener("click", function () {
 
-            navLinks.forEach(function (item) {
+        navLinks.forEach(function (item) {
 
-                item.classList.remove("active");
+            item.classList.remove("active");
 
-            });
+        });
 
-            this.classList.add("active");
+        this.classList.add("active");
 
-        }
-    );
+    });
 
 });
 
@@ -72,6 +66,7 @@ const animatedElements =
 
 const observer =
     new IntersectionObserver(
+
         function (entries) {
 
             entries.forEach(function (entry) {
@@ -87,9 +82,11 @@ const observer =
             });
 
         },
+
         {
             threshold: 0.15
         }
+
     );
 
 
