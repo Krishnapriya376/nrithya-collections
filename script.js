@@ -1,3 +1,5 @@
+/* ================= PAGE LOAD ================= */
+
 document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Nrithya Collections website loaded.");
@@ -5,39 +7,68 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/* Explore button */
+/* ================= EXPLORE BUTTON ================= */
 
 const exploreButton =
     document.querySelector(".explore-button");
 
 if (exploreButton) {
 
-    exploreButton.addEventListener("click", function (event) {
+    exploreButton.addEventListener(
+        "click",
+        function (event) {
 
-        event.preventDefault();
+            event.preventDefault();
 
-        const costumeSection =
-            document.getElementById("costumes");
+            const costumeSection =
+                document.getElementById("costumes");
 
-        if (costumeSection) {
+            if (costumeSection) {
 
-            costumeSection.scrollIntoView({
-                behavior: "smooth"
-            });
+                costumeSection.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
 
         }
-
-    });
+    );
 
 }
 
 
-/* Scroll animation */
+/* ================= NAVIGATION LINKS ================= */
+
+const navLinks =
+    document.querySelectorAll(".nav-container a");
+
+navLinks.forEach(function (link) {
+
+    link.addEventListener(
+        "click",
+        function () {
+
+            navLinks.forEach(function (item) {
+
+                item.classList.remove("active");
+
+            });
+
+            this.classList.add("active");
+
+        }
+    );
+
+});
+
+
+/* ================= SCROLL ANIMATION ================= */
 
 const animatedElements =
     document.querySelectorAll(
         ".costume-card, .accessory-card, .service-card, .offer-items div"
     );
+
 
 const observer =
     new IntersectionObserver(
@@ -48,6 +79,8 @@ const observer =
                 if (entry.isIntersecting) {
 
                     entry.target.classList.add("show");
+
+                    observer.unobserve(entry.target);
 
                 }
 
