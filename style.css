@@ -64,7 +64,7 @@ header {
 }
 
 
-/* ================= NAVIGATION BAR ================= */
+/* ================= NAVIGATION ================= */
 
 .navbar {
     position: sticky;
@@ -117,10 +117,6 @@ header {
 }
 
 .nav-container a:hover {
-    color: #f1c96b;
-}
-
-.nav-container a.active {
     color: #f1c96b;
 }
 
@@ -597,7 +593,7 @@ footer {
 }
 
 
-/* ================= SCROLL ANIMATION ================= */
+/* ================= ANIMATION ================= */
 
 .costume-card,
 .accessory-card,
@@ -660,8 +656,6 @@ footer {
     }
 
 
-    /* Mobile Navigation */
-
     .nav-container {
         padding: 7px 5px;
 
@@ -679,8 +673,6 @@ footer {
     }
 
 
-    /* Intro */
-
     .intro-container {
         padding: 45px 20px;
 
@@ -694,8 +686,6 @@ footer {
     }
 
 
-    /* Sections */
-
     .content-section {
         padding: 55px 18px;
     }
@@ -706,28 +696,20 @@ footer {
     }
 
 
-    /* Costumes */
-
     .costume-container {
         grid-template-columns: 1fr;
     }
 
-
-    /* Accessories */
 
     .accessory-container {
         grid-template-columns: 1fr;
     }
 
 
-    /* Services */
-
     .service-container {
         grid-template-columns: 1fr;
     }
 
-
-    /* Offers */
 
     .offers {
         padding: 55px 18px;
@@ -738,8 +720,6 @@ footer {
     }
 
 
-    /* Footer */
-
     .footer-container {
         grid-template-columns: 1fr;
 
@@ -748,4 +728,4 @@ footer {
         padding: 40px 20px;
     }
 
-}       
+}
