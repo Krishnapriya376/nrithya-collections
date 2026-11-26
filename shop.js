@@ -1,15 +1,22 @@
-// ===============================
+// ==========================================
+// NRITHYA COLLECTIONS - SHOPPING PAGE
+// ==========================================
+
+
+// ==========================================
 // PRODUCT DATA
-// ===============================
+// ==========================================
 
 const products = [
+
     {
         id: 1,
         name: "Bharatanatyam Costume",
         category: "costumes",
         price: 4999,
         image: "images/bharatanatyam.png",
-        description: "Traditional Bharatanatyam costume for performances and Arangetram.",
+        description:
+            "Traditional Bharatanatyam costume for performances and Arangetram.",
         badge: "Featured"
     },
 
@@ -19,7 +26,8 @@ const products = [
         category: "costumes",
         price: 4499,
         image: "images/mohiniyattam.png",
-        description: "Elegant traditional costume for Mohiniyattam performances.",
+        description:
+            "Elegant traditional costume for Mohiniyattam performances.",
         badge: ""
     },
 
@@ -29,7 +37,8 @@ const products = [
         category: "costumes",
         price: 4799,
         image: "images/kuchipudi.png",
-        description: "Classical Kuchipudi costume collection for stage performances.",
+        description:
+            "Classical Kuchipudi costume collection for stage performances.",
         badge: ""
     },
 
@@ -39,7 +48,8 @@ const products = [
         category: "costumes",
         price: 6999,
         image: "images/kathakali.png",
-        description: "Traditional Kathakali costume collection for performances.",
+        description:
+            "Traditional Kathakali costume collection for performances.",
         badge: ""
     },
 
@@ -49,7 +59,8 @@ const products = [
         category: "costumes",
         price: 3999,
         image: "images/ottamthullal.png",
-        description: "Traditional Ottamthullal costume and performance essentials.",
+        description:
+            "Traditional Ottamthullal costume and performance essentials.",
         badge: ""
     },
 
@@ -59,7 +70,8 @@ const products = [
         category: "jewellery",
         price: 1899,
         image: "images/jwellery.jpg",
-        description: "Traditional temple jewellery for classical dance performances.",
+        description:
+            "Traditional temple jewellery for classical dance performances.",
         badge: "Popular"
     },
 
@@ -69,7 +81,8 @@ const products = [
         category: "ghungroo",
         price: 899,
         image: "images/ghungroo.png",
-        description: "Traditional dance bells for practice and performances.",
+        description:
+            "Traditional dance bells for practice and performances.",
         badge: ""
     },
 
@@ -79,7 +92,8 @@ const products = [
         category: "accessories",
         price: 2299,
         image: "images/Kathakali Accessories.png",
-        description: "Traditional accessories arranged as a performance set.",
+        description:
+            "Traditional accessories arranged as a performance set.",
         badge: ""
     },
 
@@ -89,39 +103,57 @@ const products = [
         category: "accessories",
         price: 1799,
         image: "images/Ottamthullal Accessories.png",
-        description: "Traditional accessories for Ottamthullal performances.",
+        description:
+            "Traditional accessories for Ottamthullal performances.",
         badge: ""
     }
+
 ];
 
 
-// ===============================
-// VARIABLES
-// ===============================
+// ==========================================
+// CART
+// ==========================================
 
-let cart = JSON.parse(localStorage.getItem("nrithyaCart")) || [];
+let cart = JSON.parse(
+    localStorage.getItem("nrithyaCart")
+) || [];
+
+
+// ==========================================
+// CURRENT CATEGORY
+// ==========================================
 
 let currentCategory = "all";
 
 
-// ===============================
-// PRODUCT DISPLAY
-// ===============================
+// ==========================================
+// DISPLAY PRODUCTS
+// ==========================================
 
 function displayProducts(productList) {
 
-    const productGrid = document.getElementById("productGrid");
+    const productGrid =
+        document.getElementById("productGrid");
 
-    if (!productGrid) return;
+    if (!productGrid) {
+        return;
+    }
 
     productGrid.innerHTML = "";
+
+
+    // No products found
 
     if (productList.length === 0) {
 
         productGrid.innerHTML = `
             <div class="no-products">
                 <h3>No products found</h3>
-                <p>Try searching for another dance costume or accessory.</p>
+                <p>
+                    Try searching for another dance costume
+                    or accessory.
+                </p>
             </div>
         `;
 
@@ -129,41 +161,53 @@ function displayProducts(productList) {
     }
 
 
+    // Create product cards
+
     productList.forEach(product => {
 
-        const productCard = document.createElement("div");
+        const productCard =
+            document.createElement("div");
 
-        productCard.className = "product-card";
+        productCard.className =
+            "product-card";
 
 
         productCard.innerHTML = `
 
             <div class="product-image">
 
-                <img 
-                    src="${product.image}" 
+                <img
+                    src="${product.image}"
                     alt="${product.name}"
                     loading="lazy"
-                    onerror="this.style.display='none'; this.parentElement.classList.add('image-error');"
+                    onerror="this.parentElement.classList.add('image-error');"
                 >
 
             </div>
 
 
-            ${product.badge ? `
-                <span class="product-badge">
-                    ${product.badge}
-                </span>
-            ` : ""}
+            ${
+                product.badge
+                    ? `
+                        <span class="product-badge">
+                            ${product.badge}
+                        </span>
+                    `
+                    : ""
+            }
 
 
             <div class="product-info">
 
-                <h3>${product.name}</h3>
+                <h3>
+                    ${product.name}
+                </h3>
+
 
                 <p class="product-description">
                     ${product.description}
                 </p>
+
 
                 <div class="product-bottom">
 
@@ -171,7 +215,8 @@ function displayProducts(productList) {
                         ₹${product.price.toLocaleString("en-IN")}
                     </span>
 
-                    <button 
+
+                    <button
                         class="add-cart-btn"
                         onclick="addToCart(${product.id})"
                     >
@@ -181,7 +226,6 @@ function displayProducts(productList) {
                 </div>
 
             </div>
-
         `;
 
 
@@ -192,32 +236,51 @@ function displayProducts(productList) {
 }
 
 
-// ===============================
+// ==========================================
 // SEARCH PRODUCTS
-// ===============================
+// ==========================================
 
 function searchProducts() {
 
-    const searchInput = document.getElementById("searchInput");
+    const searchInput =
+        document.getElementById("searchInput");
 
-    if (!searchInput) return;
+    if (!searchInput) {
+        return;
+    }
 
-    const searchText = searchInput.value.toLowerCase().trim();
+
+    const searchText =
+        searchInput.value
+            .toLowerCase()
+            .trim();
 
 
-    let filteredProducts = products.filter(product => {
+    const filteredProducts =
+        products.filter(product => {
 
-        const matchesSearch =
-            product.name.toLowerCase().includes(searchText) ||
-            product.description.toLowerCase().includes(searchText);
+            const matchesSearch =
+                product.name
+                    .toLowerCase()
+                    .includes(searchText)
+                ||
+                product.description
+                    .toLowerCase()
+                    .includes(searchText);
 
-        const matchesCategory =
-            currentCategory === "all" ||
-            product.category === currentCategory;
 
-        return matchesSearch && matchesCategory;
+            const matchesCategory =
+                currentCategory === "all"
+                ||
+                product.category === currentCategory;
 
-    });
+
+            return (
+                matchesSearch &&
+                matchesCategory
+            );
+
+        });
 
 
     displayProducts(filteredProducts);
@@ -225,21 +288,27 @@ function searchProducts() {
 }
 
 
-// ===============================
+// ==========================================
 // CATEGORY FILTER
-// ===============================
+// ==========================================
 
 function filterCategory(category) {
 
     currentCategory = category;
 
 
-    document.querySelectorAll(".category-btn").forEach(button => {
+    // Remove active class
 
-        button.classList.remove("active");
+    document
+        .querySelectorAll(".category-btn")
+        .forEach(button => {
 
-    });
+            button.classList.remove("active");
 
+        });
+
+
+    // Add active class
 
     const selectedButton =
         document.querySelector(
@@ -248,7 +317,9 @@ function filterCategory(category) {
 
 
     if (selectedButton) {
+
         selectedButton.classList.add("active");
+
     }
 
 
@@ -257,22 +328,27 @@ function filterCategory(category) {
 }
 
 
-// ===============================
+// ==========================================
 // ADD TO CART
-// ===============================
+// ==========================================
 
 function addToCart(productId) {
 
-    const product = products.find(
-        item => item.id === productId
-    );
+    const product =
+        products.find(
+            item => item.id === productId
+        );
 
-    if (!product) return;
+
+    if (!product) {
+        return;
+    }
 
 
-    const existingItem = cart.find(
-        item => item.id === productId
-    );
+    const existingItem =
+        cart.find(
+            item => item.id === productId
+        );
 
 
     if (existingItem) {
@@ -282,8 +358,11 @@ function addToCart(productId) {
     } else {
 
         cart.push({
+
             ...product,
+
             quantity: 1
+
         });
 
     }
@@ -293,14 +372,16 @@ function addToCart(productId) {
 
     updateCart();
 
-    showToast(`${product.name} added to cart`);
+    showToast(
+        `${product.name} added to cart`
+    );
 
 }
 
 
-// ===============================
+// ==========================================
 // SAVE CART
-// ===============================
+// ==========================================
 
 function saveCart() {
 
@@ -312,24 +393,31 @@ function saveCart() {
 }
 
 
-// ===============================
+// ==========================================
 // UPDATE CART
-// ===============================
+// ==========================================
 
 function updateCart() {
 
-    const cartItems = document.getElementById("cartItems");
+    const cartItems =
+        document.getElementById("cartItems");
 
-    const cartCount = document.getElementById("cartCount");
+    const cartCount =
+        document.getElementById("cartCount");
 
-    const cartTotal = document.getElementById("cartTotal");
+    const cartTotal =
+        document.getElementById("cartTotal");
 
 
-    if (!cartItems) return;
+    if (!cartItems) {
+        return;
+    }
 
 
     cartItems.innerHTML = "";
 
+
+    // Empty cart
 
     if (cart.length === 0) {
 
@@ -339,13 +427,16 @@ function updateCart() {
             </div>
         `;
 
+
         if (cartCount) {
             cartCount.textContent = "0";
         }
 
+
         if (cartTotal) {
             cartTotal.textContent = "₹0";
         }
+
 
         return;
     }
@@ -356,340 +447,26 @@ function updateCart() {
     let count = 0;
 
 
+    // Display cart items
+
     cart.forEach(item => {
 
-        total += item.price * item.quantity;
+        total +=
+            item.price *
+            item.quantity;
+
 
         count += item.quantity;
 
 
-        const cartItem = document.createElement("div");
+        const cartItem =
+            document.createElement("div");
 
-        cartItem.className = "cart-item";
+        cartItem.className =
+            "cart-item";
 
 
         cartItem.innerHTML = `
-
-            <div class="cart-item-image">
-
-                <img 
-                    src="${item.image}" 
-                    alt="${item.name}"
-                >
-
-            </div>
-
-
-            <div class="cart-item-info">
-
-                <h4>${item.name}</h4>
-
-                <p>
-                    ₹${item.price.toLocaleString("en-IN")}
-                </p>
-
-
-                <div class="quantity-controls">
-
-                    <button 
-                        onclick="changeQuantity(${item.id}, -1)"
-                    >
-                        −
-                    </button>
-
-                    <span>${item.quantity}</span>
-
-                    <button 
-                        onclick="changeQuantity(${item.id}, 1)"
-                    >
-                        +
-                    </button>
-
-                </div>
-
-
-                <button 
-                    class="remove-cart-btn"
-                    onclick="removeFromCart(${item.id})"
-                >
-                    Remove
-                </button>
-
-            </div>
-
-        `;
-
-
-        cartItems.appendChild(cartItem);
-
-    });
-
-
-    if (cartCount) {
-        cartCount.textContent = count;
-    }
-
-
-    if (cartTotal) {
-
-        cartTotal.textContent =
-            `₹${total.toLocaleString("en-IN")}`;
-
-    }
-
-}
-
-
-// ===============================
-// CHANGE QUANTITY
-// ===============================
-
-function changeQuantity(productId, change) {
-
-    const item = cart.find(
-        product => product.id === productId
-    );
-
-
-    if (!item) return;
-
-
-    item.quantity += change;
-
-
-    if (item.quantity <= 0) {
-
-        cart = cart.filter(
-            product => product.id !== productId
-        );
-
-    }
-
-
-    saveCart();
-
-    updateCart();
-
-}
-
-
-// ===============================
-// REMOVE FROM CART
-// ===============================
-
-function removeFromCart(productId) {
-
-    cart = cart.filter(
-        product => product.id !== productId
-    );
-
-
-    saveCart();
-
-    updateCart();
-
-}
-
-
-// ===============================
-// OPEN CART
-// ===============================
-
-function openCart() {
-
-    const cartPanel =
-        document.getElementById("cartPanel");
-
-    if (cartPanel) {
-        cartPanel.classList.add("active");
-    }
-
-}
-
-
-// ===============================
-// CLOSE CART
-// ===============================
-
-function closeCart() {
-
-    const cartPanel =
-        document.getElementById("cartPanel");
-
-    if (cartPanel) {
-        cartPanel.classList.remove("active");
-    }
-
-}
-
-
-// ===============================
-// CHECKOUT
-// ===============================
-
-function checkout() {
-
-    if (cart.length === 0) {
-
-        showToast("Your cart is empty.");
-
-        return;
-    }
-
-
-    showToast(
-        "Checkout feature will be connected to the backend."
-    );
-
-}
-
-
-// ===============================
-// ACCOUNT MODAL
-// ===============================
-
-function openAccount() {
-
-    const accountModal =
-        document.getElementById("accountModal");
-
-    if (accountModal) {
-        accountModal.classList.add("active");
-    }
-
-}
-
-
-function closeAccount() {
-
-    const accountModal =
-        document.getElementById("accountModal");
-
-    if (accountModal) {
-        accountModal.classList.remove("active");
-    }
-
-}
-
-
-// ===============================
-// ORDERS MODAL
-// ===============================
-
-function openOrders() {
-
-    const ordersModal =
-        document.getElementById("ordersModal");
-
-    if (ordersModal) {
-        ordersModal.classList.add("active");
-    }
-
-}
-
-
-function closeOrders() {
-
-    const ordersModal =
-        document.getElementById("ordersModal");
-
-    if (ordersModal) {
-        ordersModal.classList.remove("active");
-    }
-
-}
-
-
-// ===============================
-// TOAST MESSAGE
-// ===============================
-
-function showToast(message) {
-
-    const toast =
-        document.getElementById("toast");
-
-
-    if (!toast) return;
-
-
-    toast.textContent = message;
-
-    toast.classList.add("show");
-
-
-    setTimeout(() => {
-
-        toast.classList.remove("show");
-
-    }, 2500);
-
-}
-
-
-// ===============================
-// PAGE INITIALIZATION
-// ===============================
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    displayProducts(products);
-
-    updateCart();
-
-
-    // Search
-
-    const searchInput =
-        document.getElementById("searchInput");
-
-
-    if (searchInput) {
-
-        searchInput.addEventListener(
-            "input",
-            searchProducts
-        );
-
-    }
-
-
-    // Category buttons
-
-    document.querySelectorAll(
-        ".category-btn"
-    ).forEach(button => {
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                const category =
-                    button.dataset.category;
-
-                filterCategory(category);
-
-            }
-        );
-
-    });
-
-});
-    }
-
-
-    cartItems.innerHTML = "";
-
-
-    cart.forEach(function(item) {
-
-        const div =
-            document.createElement("div");
-
-        div.className = "cart-item";
-
-
-        div.innerHTML = `
 
             <div class="cart-item-image">
 
@@ -707,6 +484,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ${item.name}
                 </h4>
 
+
                 <p>
                     ₹${item.price.toLocaleString("en-IN")}
                 </p>
@@ -715,10 +493,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="quantity-controls">
 
                     <button
-                        onclick="changeQuantity(${item.id}, -1)">
-
+                        onclick="changeQuantity(${item.id}, -1)"
+                    >
                         −
-
                     </button>
 
 
@@ -728,21 +505,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                     <button
-                        onclick="changeQuantity(${item.id}, 1)">
-
+                        onclick="changeQuantity(${item.id}, 1)"
+                    >
                         +
-
                     </button>
 
                 </div>
 
 
                 <button
-                    class="remove-item"
-                    onclick="removeFromCart(${item.id})">
-
+                    class="remove-cart-btn"
+                    onclick="removeFromCart(${item.id})"
+                >
                     Remove
-
                 </button>
 
             </div>
@@ -750,23 +525,47 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
 
-        cartItems.appendChild(div);
+        cartItems.appendChild(cartItem);
 
     });
+
+
+    // Cart count
+
+    if (cartCount) {
+
+        cartCount.textContent =
+            count;
+
+    }
+
+
+    // Cart total
+
+    if (cartTotal) {
+
+        cartTotal.textContent =
+            `₹${total.toLocaleString("en-IN")}`;
+
+    }
 
 }
 
 
-/* ================= CHANGE QUANTITY ================= */
+// ==========================================
+// CHANGE QUANTITY
+// ==========================================
 
-function changeQuantity(id, change) {
+function changeQuantity(
+    productId,
+    change
+) {
 
     const item =
-        cart.find(function(product) {
-
-            return product.id === id;
-
-        });
+        cart.find(
+            product =>
+                product.id === productId
+        );
 
 
     if (!item) {
@@ -777,14 +576,15 @@ function changeQuantity(id, change) {
     item.quantity += change;
 
 
+    // Remove if quantity becomes zero
+
     if (item.quantity <= 0) {
 
         cart =
-            cart.filter(function(product) {
-
-                return product.id !== id;
-
-            });
+            cart.filter(
+                product =>
+                    product.id !== productId
+            );
 
     }
 
@@ -796,415 +596,269 @@ function changeQuantity(id, change) {
 }
 
 
-/* ================= REMOVE ITEM ================= */
+// ==========================================
+// REMOVE FROM CART
+// ==========================================
 
-function removeFromCart(id) {
+function removeFromCart(productId) {
 
     cart =
-        cart.filter(function(item) {
-
-            return item.id !== id;
-
-        });
+        cart.filter(
+            product =>
+                product.id !== productId
+        );
 
 
     saveCart();
 
     updateCart();
 
-}
 
-
-/* ================= OPEN CART ================= */
-
-cartButton.addEventListener(
-    "click",
-    function() {
-
-        cartPanel.classList.add("open");
-
-        cartOverlay.classList.add("show");
-
-    }
-);
-
-
-/* ================= CLOSE CART ================= */
-
-function closeCartPanel() {
-
-    cartPanel.classList.remove("open");
-
-    cartOverlay.classList.remove("show");
+    showToast(
+        "Item removed from cart"
+    );
 
 }
 
 
-closeCart.addEventListener(
-    "click",
-    closeCartPanel
-);
+// ==========================================
+// OPEN CART
+// ==========================================
+
+function openCart() {
+
+    const cartPanel =
+        document.getElementById("cartPanel");
 
 
-cartOverlay.addEventListener(
-    "click",
-    closeCartPanel
-);
+    if (cartPanel) {
 
-
-/* =====================================================
-   ACCOUNT
-   ===================================================== */
-
-accountButton.addEventListener(
-    "click",
-    function() {
-
-        accountModal.classList.add("show");
-
-    }
-);
-
-
-/* ================= CLOSE MODALS ================= */
-
-document
-    .querySelectorAll(".modal-close")
-    .forEach(function(button) {
-
-        button.addEventListener(
-            "click",
-            function() {
-
-                const id =
-                    this.dataset.close;
-
-
-                document
-                    .getElementById(id)
-                    .classList.remove("show");
-
-            }
+        cartPanel.classList.add(
+            "active"
         );
 
-    });
-
-
-/* ================= LOGIN / REGISTER ================= */
-
-const loginSection =
-    document.getElementById("loginSection");
-
-const registerSection =
-    document.getElementById("registerSection");
-
-
-document
-    .getElementById("showRegister")
-    .addEventListener(
-        "click",
-        function() {
-
-            loginSection.classList.add(
-                "hidden"
-            );
-
-            registerSection.classList.remove(
-                "hidden"
-            );
-
-        }
-    );
-
-
-document
-    .getElementById("showLogin")
-    .addEventListener(
-        "click",
-        function() {
-
-            registerSection.classList.add(
-                "hidden"
-            );
-
-            loginSection.classList.remove(
-                "hidden"
-            );
-
-        }
-    );
-
-
-/* ================= REGISTER ================= */
-
-document
-    .getElementById("registerForm")
-    .addEventListener(
-        "submit",
-        function(event) {
-
-            event.preventDefault();
-
-
-            const name =
-                document.getElementById(
-                    "registerName"
-                ).value;
-
-
-            const email =
-                document.getElementById(
-                    "registerEmail"
-                ).value;
-
-
-            localStorage.setItem(
-                "nrithyaUser",
-                JSON.stringify({
-
-                    name: name,
-
-                    email: email
-
-                })
-            );
-
-
-            registerSection.classList.add(
-                "hidden"
-            );
-
-            loginSection.classList.remove(
-                "hidden"
-            );
-
-
-            showToast(
-                "Account created successfully."
-            );
-
-        }
-    );
-
-
-/* ================= LOGIN ================= */
-
-document
-    .getElementById("loginForm")
-    .addEventListener(
-        "submit",
-        function(event) {
-
-            event.preventDefault();
-
-
-            showToast(
-                "Sign in successful."
-            );
-
-
-            accountModal.classList.remove(
-                "show"
-            );
-
-        }
-    );
-
-
-/* =====================================================
-   ORDERS
-   ===================================================== */
-
-ordersButton.addEventListener(
-    "click",
-    function() {
-
-        displayOrders();
-
-        ordersModal.classList.add("show");
-
     }
-);
+
+}
 
 
-function displayOrders() {
+// ==========================================
+// CLOSE CART
+// ==========================================
 
-    const ordersList =
-        document.getElementById(
-            "ordersList"
+function closeCart() {
+
+    const cartPanel =
+        document.getElementById("cartPanel");
+
+
+    if (cartPanel) {
+
+        cartPanel.classList.remove(
+            "active"
         );
 
+    }
 
-    const orders =
-        JSON.parse(
-            localStorage.getItem(
-                "nrithyaOrders"
-            )
-        ) || [];
+}
 
 
-    if (orders.length === 0) {
+// ==========================================
+// CHECKOUT
+// ==========================================
+
+function checkout() {
+
+    if (cart.length === 0) {
+
+        showToast(
+            "Your cart is empty."
+        );
 
         return;
     }
 
 
-    ordersList.innerHTML = "";
-
-
-    orders.forEach(function(order) {
-
-        const div =
-            document.createElement("div");
-
-        div.className = "order-card";
-
-
-        div.innerHTML = `
-
-            <h3>
-                Order #${order.id}
-            </h3>
-
-            <p>
-                Date: ${order.date}
-            </p>
-
-            <p>
-                Items: ${order.items}
-            </p>
-
-            <p>
-                Total:
-                ₹${order.total.toLocaleString("en-IN")}
-            </p>
-
-            <p>
-                Status: Order Placed
-            </p>
-
-        `;
-
-
-        ordersList.appendChild(div);
-
-    });
+    showToast(
+        "Checkout feature will be connected to the backend."
+    );
 
 }
 
 
-/* =====================================================
-   CHECKOUT
-   ===================================================== */
+// ==========================================
+// ACCOUNT MODAL
+// ==========================================
 
-checkoutButton.addEventListener(
-    "click",
-    function() {
+function openAccount() {
 
-        if (cart.length === 0) {
-
-            showToast(
-                "Your cart is empty."
-            );
-
-            return;
-        }
+    const accountModal =
+        document.getElementById("accountModal");
 
 
-        let total = 0;
+    if (accountModal) {
 
-        let itemCount = 0;
-
-
-        cart.forEach(function(item) {
-
-            total +=
-                item.price *
-                item.quantity;
-
-            itemCount +=
-                item.quantity;
-
-        });
-
-
-        const orders =
-            JSON.parse(
-                localStorage.getItem(
-                    "nrithyaOrders"
-                )
-            ) || [];
-
-
-        orders.push({
-
-            id:
-                Date.now()
-                    .toString()
-                    .slice(-6),
-
-            date:
-                new Date()
-                    .toLocaleDateString("en-IN"),
-
-            items:
-                itemCount,
-
-            total:
-                total
-
-        });
-
-
-        localStorage.setItem(
-            "nrithyaOrders",
-            JSON.stringify(orders)
-        );
-
-
-        cart = [];
-
-
-        saveCart();
-
-        updateCart();
-
-        closeCartPanel();
-
-
-        showToast(
-            "Order placed successfully."
+        accountModal.classList.add(
+            "active"
         );
 
     }
-);
+
+}
 
 
-/* =====================================================
-   TOAST MESSAGE
-   ===================================================== */
+function closeAccount() {
+
+    const accountModal =
+        document.getElementById("accountModal");
+
+
+    if (accountModal) {
+
+        accountModal.classList.remove(
+            "active"
+        );
+
+    }
+
+}
+
+
+// ==========================================
+// ORDERS MODAL
+// ==========================================
+
+function openOrders() {
+
+    const ordersModal =
+        document.getElementById("ordersModal");
+
+
+    if (ordersModal) {
+
+        ordersModal.classList.add(
+            "active"
+        );
+
+    }
+
+}
+
+
+function closeOrders() {
+
+    const ordersModal =
+        document.getElementById("ordersModal");
+
+
+    if (ordersModal) {
+
+        ordersModal.classList.remove(
+            "active"
+        );
+
+    }
+
+}
+
+
+// ==========================================
+// TOAST MESSAGE
+// ==========================================
 
 function showToast(message) {
 
-    toast.textContent = message;
+    const toast =
+        document.getElementById("toast");
 
-    toast.classList.add("show");
+
+    if (!toast) {
+        return;
+    }
 
 
-    setTimeout(function() {
+    toast.textContent =
+        message;
 
-        toast.classList.remove("show");
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    setTimeout(() => {
+
+        toast.classList.remove(
+            "show"
+        );
 
     }, 2500);
 
 }
 
 
-/* =====================================================
-   START SHOP
-   ===================================================== */
+// ==========================================
+// INITIALIZE SHOPPING PAGE
+// ==========================================
 
-displayProducts(products);
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-updateCart();              
-                            
+        // Display all products
+
+        displayProducts(products);
+
+
+        // Update cart
+
+        updateCart();
+
+
+        // Search box
+
+        const searchInput =
+            document.getElementById(
+                "searchInput"
+            );
+
+
+        if (searchInput) {
+
+            searchInput.addEventListener(
+                "input",
+                searchProducts
+            );
+
+        }
+
+
+        // Category buttons
+
+        document
+            .querySelectorAll(
+                ".category-btn"
+            )
+            .forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        const category =
+                            button.dataset.category;
+
+
+                        filterCategory(
+                            category
+                        );
+
+                    }
+                );
+
+            });
+
+    }
+);    
+
+            
